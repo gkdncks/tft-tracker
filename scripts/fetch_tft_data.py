@@ -188,19 +188,17 @@ def main():
         if "puuid" not in player:
             continue
         log.info(f"Fetching match list for {player['name']}...")
-        try:
-            match_ids = get_match_ids(player["puuid"], count=100)
+        match_ids = get_match_ids(player["puuid"], count=100)
+        log.info(f"  Got {len(match_ids)} match IDs")
+        time.sleep(REQUEST_DELAY)
+        for match_id in match_ids:
+            if match_id in existing_ids:
+                continue
+            log.info(f"  Downloading {match_id}...")
+            matches[match_id] = get_match(match_id)
+            existing_ids.add(match_id)
+            new_count += 1
             time.sleep(REQUEST_DELAY)
-            for match_id in match_ids:
-                if match_id in existing_ids:
-                    continue
-                log.info(f"  Downloading {match_id}...")
-                matches[match_id] = get_match(match_id)
-                existing_ids.add(match_id)
-                new_count += 1
-                time.sleep(REQUEST_DELAY)
-        except Exception as e:
-            log.error(f"Error fetching matches for {player['name']}: {e}")
 
     log.info(f"Downloaded {new_count} new matches")
 
