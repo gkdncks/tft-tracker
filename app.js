@@ -91,11 +91,39 @@ function renderPlayerCards(stats, season) {
       return `<span class="form-badge ${cls}">${p}</span>`;
     }).join("");
 
-    const sh = c.shared || {};
-    const shForms = (c.shared_recent_placements || []).map((p) => {
-      const cls = p === 1 ? "form-1" : p <= 4 ? "form-top4" : "form-bot";
-      return `<span class="form-badge ${cls}">${p}</span>`;
-    }).join("");
+    const sh  = c.shared        || {};
+    const shr = c.shared_ranked || {};
+
+    function statsRow(d, recentKey, label) {
+      const pl = (c[recentKey] || []);
+      const badges = pl.map((p) => {
+        const cls = p === 1 ? "form-1" : p <= 4 ? "form-top4" : "form-bot";
+        return `<span class="form-badge ${cls}">${p}</span>`;
+      }).join("");
+      return `
+        <div class="card-shared">
+          <div class="shared-label">${label}</div>
+          <div class="card-stats shared-stats">
+            <div class="stat-block">
+              <div class="stat-value">${d.avg_placement || "—"}위</div>
+              <div class="stat-label">평균 순위</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value gold">${d.top1_count ?? "—"}회</div>
+              <div class="stat-label">1등</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value ${d.top4_rate >= 50 ? "positive" : ""}">${d.top4_rate ?? "—"}%</div>
+              <div class="stat-label">탑4율</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value">${d.total_games ?? "—"}</div>
+              <div class="stat-label">게임 수</div>
+            </div>
+          </div>
+          ${badges ? `<div class="recent-forms shared-forms">${badges}</div>` : ""}
+        </div>`;
+    }
 
     return `
       <div class="player-card" style="--tier-color: ${tier.color}">
@@ -103,50 +131,32 @@ function renderPlayerCards(stats, season) {
           <span class="card-name">${name}</span>
           <span class="card-tier" style="color: ${tier.color}">${rankStr}</span>
         </div>
-        <div class="card-stats">
-          <div class="stat-block">
-            <div class="stat-value">${c.avg_placement || "—"}위</div>
-            <div class="stat-label">평균 순위</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-value gold">${c.top1_count}회</div>
-            <div class="stat-label">1등</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-value ${c.top4_rate >= 50 ? "positive" : ""}">${c.top4_rate}%</div>
-            <div class="stat-label">탑4율</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-value">${c.total_games}</div>
-            <div class="stat-label">게임 수</div>
-          </div>
-        </div>
-        <div class="card-recent">
-          <span class="recent-label">최근 ${(c.recent_placements || []).length}게임</span>
-          <div class="recent-forms">${forms}</div>
-        </div>
         <div class="card-shared">
-          <div class="shared-label">공동경기</div>
+          <div class="shared-label">랭크</div>
           <div class="card-stats shared-stats">
             <div class="stat-block">
-              <div class="stat-value">${sh.avg_placement || "—"}위</div>
+              <div class="stat-value">${c.avg_placement || "—"}위</div>
               <div class="stat-label">평균 순위</div>
             </div>
             <div class="stat-block">
-              <div class="stat-value gold">${sh.top1_count ?? "—"}회</div>
+              <div class="stat-value gold">${c.top1_count ?? "—"}회</div>
               <div class="stat-label">1등</div>
             </div>
             <div class="stat-block">
-              <div class="stat-value ${sh.top4_rate >= 50 ? "positive" : ""}">${sh.top4_rate ?? "—"}%</div>
+              <div class="stat-value ${c.top4_rate >= 50 ? "positive" : ""}">${c.top4_rate ?? "—"}%</div>
               <div class="stat-label">탑4율</div>
             </div>
             <div class="stat-block">
-              <div class="stat-value">${sh.total_games ?? "—"}</div>
+              <div class="stat-value">${c.total_games ?? "—"}</div>
               <div class="stat-label">게임 수</div>
             </div>
           </div>
-          ${shForms ? `<div class="recent-forms shared-forms">${shForms}</div>` : ""}
+          <div class="card-recent">
+            <div class="recent-forms">${forms}</div>
+          </div>
         </div>
+        ${statsRow(sh,  "shared_recent_placements",        "공동경기")}
+        ${statsRow(shr, "shared_ranked_recent_placements", "공동경기 (랭크)")}
       </div>`;
   }).join("");
 }
@@ -251,8 +261,6 @@ function renderRecentGames(stats, season) {
       <tr>
         <td><span class="place-badge ${placeBadgeClass(r.placement)}">${r.placement}위</span></td>
         <td class="match-player-name">${r.name}</td>
-        <td class="match-round">${toStageRound(r.last_round)}</td>
-        <td class="match-time">${formatDuration(r.time_eliminated)}</td>
       </tr>`).join("");
 
     return `
@@ -262,7 +270,7 @@ function renderRecentGames(stats, season) {
           <span class="match-set">Set ${match.set_number}</span>
         </div>
         <table class="match-table">
-          <thead><tr><th>순위</th><th>소환사</th><th>라운드</th><th>플레이타임</th></tr></thead>
+          <thead><tr><th>순위</th><th>소환사</th></tr></thead>
           <tbody>${rows}</tbody>
         </table>
       </div>`;

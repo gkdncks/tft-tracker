@@ -110,25 +110,29 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
         if "puuid" not in player:
             continue
         puuid = player["puuid"]
-        placements = []
-        shared_placements = []
+        ranked, shared, shared_ranked = [], [], []
         for match in matches.values():
             info = match.get("info", {})
             if set_filter is not None and info.get("tft_set_number") != set_filter:
                 continue
+            is_ranked = info.get("queue_id") == 1100
             participants_puuids = {p.get("puuid") for p in info.get("participants", [])}
             is_shared = len(all_puuids & participants_puuids) >= 2
             for p in info.get("participants", []):
                 if p.get("puuid") == puuid:
                     entry = (info.get("game_datetime", 0), p["placement"])
-                    placements.append(entry)
+                    if is_ranked:
+                        ranked.append(entry)
                     if is_shared:
-                        shared_placements.append(entry)
+                        shared.append(entry)
+                    if is_ranked and is_shared:
+                        shared_ranked.append(entry)
                     break
-        placements.sort(reverse=True)
-        shared_placements.sort(reverse=True)
-        all_p = [p for _, p in placements]
-        sh_p = [p for _, p in shared_placements]
+        for lst in (ranked, shared, shared_ranked):
+            lst.sort(reverse=True)
+        r_p  = [p for _, p in ranked]
+        sh_p = [p for _, p in shared]
+        sr_p = [p for _, p in shared_ranked]
 
         def stats(pl):
             return {
@@ -142,10 +146,12 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
             "tier": player.get("tier", "UNRANKED"),
             "rank": player.get("rank", ""),
             "lp": player.get("lp", 0),
-            **stats(all_p),
-            "recent_placements": all_p[:10],
+            **stats(r_p),
+            "recent_placements": r_p[:10],
             "shared": stats(sh_p),
             "shared_recent_placements": sh_p[:10],
+            "shared_ranked": stats(sr_p),
+            "shared_ranked_recent_placements": sr_p[:10],
         }
     return cards
 
