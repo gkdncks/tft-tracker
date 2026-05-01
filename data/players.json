@@ -1,16 +1,16 @@
 {
   "players": [
     {
-      "name": "플레이어1",
-      "riot_id": "닉네임1#KR1"
+      "name": "하우찬",
+      "riot_id": "택택배#KR1"
     },
     {
-      "name": "플레이어2",
-      "riot_id": "닉네임2#KR1"
+      "name": "윤세호",
+      "riot_id": "삶은속이지않는다#KR1"
     },
     {
-      "name": "플레이어3",
-      "riot_id": "닉네임3#KR1"
+      "name": "박성우",
+      "riot_id": "successfulfeeder#KR1"
     }
   ]
 }
