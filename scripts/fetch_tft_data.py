@@ -50,6 +50,7 @@ def resolve_player(riot_id: str) -> tuple:
     log.info(f"  Account PUUID: {puuid}")
     time.sleep(REQUEST_DELAY)
     summoner = api_get(f"{KR_BASE}/tft/summoner/v1/summoners/by-puuid/{quote(puuid, safe='')}")
+    log.info(f"  Summoner API fields: {list(summoner.keys())}")
     summoner_id = summoner.get("id", "")
     log.info(f"  lv.{summoner.get('summonerLevel', '?')}, summoner_id: {'OK' if summoner_id else 'MISSING'}")
     return summoner["puuid"], summoner_id
