@@ -4,7 +4,7 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-01T09:26:50.307753+00:00",
+  "last_updated": "2026-05-01T15:46:55.694931+00:00",
   "available_sets": [
     17,
     16
@@ -15,10 +15,10 @@
         "tier": "GOLD",
         "rank": "IV",
         "lp": 75,
-        "total_games": 100,
-        "avg_placement": 4.21,
-        "top1_count": 9,
-        "top4_rate": 55.0,
+        "total_games": 70,
+        "avg_placement": 4.3,
+        "top1_count": 7,
+        "top4_rate": 54.3,
         "recent_placements": [
           6,
           1,
@@ -48,27 +48,45 @@
           8,
           3,
           7
+        ],
+        "shared_ranked": {
+          "total_games": 10,
+          "avg_placement": 3.8,
+          "top1_count": 2,
+          "top4_rate": 60.0
+        },
+        "shared_ranked_recent_placements": [
+          3,
+          1,
+          7,
+          5,
+          5,
+          2,
+          1,
+          8,
+          3,
+          3
         ]
       },
       "윤세호": {
-        "tier": "GOLD",
-        "rank": "I",
-        "lp": 82,
-        "total_games": 57,
-        "avg_placement": 4.05,
+        "tier": "PLATINUM",
+        "rank": "III",
+        "lp": 10,
+        "total_games": 43,
+        "avg_placement": 3.81,
         "top1_count": 5,
-        "top4_rate": 59.6,
+        "top4_rate": 65.1,
         "recent_placements": [
+          3,
+          6,
+          2,
+          1,
           3,
           5,
           2,
           3,
           2,
-          2,
-          2,
-          1,
-          3,
-          8
+          2
         ],
         "shared": {
           "total_games": 35,
@@ -87,17 +105,37 @@
           3,
           3,
           6
+        ],
+        "shared_ranked": {
+          "total_games": 17,
+          "avg_placement": 4.0,
+          "top1_count": 1,
+          "top4_rate": 58.8
+        },
+        "shared_ranked_recent_placements": [
+          5,
+          2,
+          2,
+          3,
+          5,
+          7,
+          6,
+          3,
+          3,
+          6
         ]
       },
       "박성우": {
         "tier": "GOLD",
-        "rank": "IV",
-        "lp": 61,
-        "total_games": 107,
-        "avg_placement": 4.83,
-        "top1_count": 9,
-        "top4_rate": 43.9,
+        "rank": "III",
+        "lp": 42,
+        "total_games": 30,
+        "avg_placement": 4.53,
+        "top1_count": 4,
+        "top4_rate": 50.0,
         "recent_placements": [
+          2,
+          3,
           2,
           3,
           6,
@@ -105,9 +143,7 @@
           4,
           1,
           4,
-          7,
-          1,
-          2
+          7
         ],
         "shared": {
           "total_games": 45,
@@ -126,6 +162,24 @@
           5,
           8,
           5
+        ],
+        "shared_ranked": {
+          "total_games": 13,
+          "avg_placement": 6.0,
+          "top1_count": 0,
+          "top4_rate": 15.4
+        },
+        "shared_ranked_recent_placements": [
+          7,
+          8,
+          6,
+          8,
+          6,
+          2,
+          2,
+          5,
+          8,
+          5
         ]
       }
     },
@@ -134,10 +188,10 @@
         "tier": "GOLD",
         "rank": "IV",
         "lp": 75,
-        "total_games": 13,
-        "avg_placement": 4.23,
+        "total_games": 12,
+        "avg_placement": 4.08,
         "top1_count": 3,
-        "top4_rate": 46.2,
+        "top4_rate": 50.0,
         "recent_placements": [
           6,
           1,
@@ -166,27 +220,44 @@
           1,
           8,
           3
+        ],
+        "shared_ranked": {
+          "total_games": 9,
+          "avg_placement": 3.89,
+          "top1_count": 2,
+          "top4_rate": 55.6
+        },
+        "shared_ranked_recent_placements": [
+          3,
+          1,
+          7,
+          5,
+          5,
+          2,
+          1,
+          8,
+          3
         ]
       },
       "윤세호": {
-        "tier": "GOLD",
-        "rank": "I",
-        "lp": 82,
-        "total_games": 40,
-        "avg_placement": 3.95,
-        "top1_count": 4,
-        "top4_rate": 62.5,
+        "tier": "PLATINUM",
+        "rank": "III",
+        "lp": 10,
+        "total_games": 43,
+        "avg_placement": 3.81,
+        "top1_count": 5,
+        "top4_rate": 65.1,
         "recent_placements": [
+          3,
+          6,
+          2,
+          1,
           3,
           5,
           2,
           3,
           2,
-          2,
-          2,
-          1,
-          3,
-          8
+          2
         ],
         "shared": {
           "total_games": 18,
@@ -205,17 +276,37 @@
           3,
           3,
           6
+        ],
+        "shared_ranked": {
+          "total_games": 17,
+          "avg_placement": 4.0,
+          "top1_count": 1,
+          "top4_rate": 58.8
+        },
+        "shared_ranked_recent_placements": [
+          5,
+          2,
+          2,
+          3,
+          5,
+          7,
+          6,
+          3,
+          3,
+          6
         ]
       },
       "박성우": {
         "tier": "GOLD",
-        "rank": "IV",
-        "lp": 61,
-        "total_games": 37,
-        "avg_placement": 4.76,
+        "rank": "III",
+        "lp": 42,
+        "total_games": 29,
+        "avg_placement": 4.45,
         "top1_count": 4,
-        "top4_rate": 45.9,
+        "top4_rate": 51.7,
         "recent_placements": [
+          2,
+          3,
           2,
           3,
           6,
@@ -223,9 +314,7 @@
           4,
           1,
           4,
-          7,
-          1,
-          2
+          7
         ],
         "shared": {
           "total_games": 13,
@@ -244,6 +333,24 @@
           5,
           8,
           5
+        ],
+        "shared_ranked": {
+          "total_games": 12,
+          "avg_placement": 5.92,
+          "top1_count": 0,
+          "top4_rate": 16.7
+        },
+        "shared_ranked_recent_placements": [
+          7,
+          8,
+          6,
+          8,
+          6,
+          2,
+          2,
+          5,
+          8,
+          5
         ]
       }
     },
@@ -252,21 +359,21 @@
         "tier": "GOLD",
         "rank": "IV",
         "lp": 75,
-        "total_games": 87,
-        "avg_placement": 4.21,
-        "top1_count": 6,
-        "top4_rate": 56.3,
+        "total_games": 58,
+        "avg_placement": 4.34,
+        "top1_count": 4,
+        "top4_rate": 55.2,
         "recent_placements": [
-          7,
-          5,
           3,
           6,
-          3,
           1,
           4,
-          2,
+          5,
           6,
-          1
+          5,
+          5,
+          2,
+          4
         ],
         "shared": {
           "total_games": 27,
@@ -285,28 +392,26 @@
           3,
           6,
           2
+        ],
+        "shared_ranked": {
+          "total_games": 1,
+          "avg_placement": 3.0,
+          "top1_count": 0,
+          "top4_rate": 100.0
+        },
+        "shared_ranked_recent_placements": [
+          3
         ]
       },
       "윤세호": {
-        "tier": "GOLD",
-        "rank": "I",
-        "lp": 82,
-        "total_games": 17,
-        "avg_placement": 4.29,
-        "top1_count": 1,
-        "top4_rate": 52.9,
-        "recent_placements": [
-          2,
-          6,
-          1,
-          4,
-          7,
-          3,
-          3,
-          6,
-          4,
-          7
-        ],
+        "tier": "PLATINUM",
+        "rank": "III",
+        "lp": 10,
+        "total_games": 0,
+        "avg_placement": 0,
+        "top1_count": 0,
+        "top4_rate": 0,
+        "recent_placements": [],
         "shared": {
           "total_games": 17,
           "avg_placement": 4.29,
@@ -324,27 +429,25 @@
           6,
           4,
           7
-        ]
+        ],
+        "shared_ranked": {
+          "total_games": 0,
+          "avg_placement": 0,
+          "top1_count": 0,
+          "top4_rate": 0
+        },
+        "shared_ranked_recent_placements": []
       },
       "박성우": {
         "tier": "GOLD",
-        "rank": "IV",
-        "lp": 61,
-        "total_games": 70,
-        "avg_placement": 4.87,
-        "top1_count": 5,
-        "top4_rate": 42.9,
+        "rank": "III",
+        "lp": 42,
+        "total_games": 1,
+        "avg_placement": 7.0,
+        "top1_count": 0,
+        "top4_rate": 0.0,
         "recent_placements": [
-          7,
-          8,
-          5,
-          6,
-          5,
-          1,
-          5,
-          7,
-          6,
-          8
+          7
         ],
         "shared": {
           "total_games": 32,
@@ -363,6 +466,15 @@
           2,
           6,
           4
+        ],
+        "shared_ranked": {
+          "total_games": 1,
+          "avg_placement": 7.0,
+          "top1_count": 0,
+          "top4_rate": 0.0
+        },
+        "shared_ranked_recent_placements": [
+          7
         ]
       }
     }
