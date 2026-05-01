@@ -44,35 +44,25 @@ def get_puuid(game_name: str, tag_line: str) -> str:
 
 
 def resolve_player(riot_id: str) -> tuple:
-    """Returns (puuid, summoner_id) — summoner_id may be empty on newer API versions"""
+    """Returns (puuid, summoner_id)"""
     game_name, tag = riot_id.split("#", 1)
     puuid = get_puuid(game_name, tag)
     log.info(f"  Account PUUID: {puuid}")
     time.sleep(REQUEST_DELAY)
     summoner = api_get(f"{KR_BASE}/tft/summoner/v1/summoners/by-puuid/{quote(puuid, safe='')}")
-    log.info(f"  lv.{summoner.get('summonerLevel', '?')}")
-    return summoner["puuid"], summoner.get("id", "")
+    summoner_id = summoner.get("id", "")
+    log.info(f"  lv.{summoner.get('summonerLevel', '?')}, summoner_id: {'OK' if summoner_id else 'MISSING'}")
+    return summoner["puuid"], summoner_id
 
 
-def get_league_entry(puuid: str, summoner_id: str = "") -> dict:
-    # 신규: PUUID 기반 엔드포인트 시도
-    try:
-        entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-puuid/{quote(puuid, safe='')}")
-        for e in entries:
-            if e.get("queueType") == "RANKED_TFT":
-                return e
+def get_league_entry(summoner_id: str) -> dict:
+    if not summoner_id:
+        log.warning("  summoner_id 없음 — 랭크 조회 불가")
         return {}
-    except Exception:
-        pass
-    # 구버전 폴백: summoner ID 기반
-    if summoner_id:
-        try:
-            entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-summoner/{quote(summoner_id, safe='')}")
-            for e in entries:
-                if e.get("queueType") == "RANKED_TFT":
-                    return e
-        except Exception:
-            pass
+    entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-summoner/{quote(summoner_id, safe='')}")
+    for e in entries:
+        if e.get("queueType") == "RANKED_TFT":
+            return e
     return {}
 
 
@@ -280,7 +270,7 @@ def main():
     # Resolve PUUID + summoner_id for new players
     players_updated = False
     for player in players:
-        if "puuid" not in player or "summoner_id" not in player:
+        if not player.get("puuid") or not player.get("summoner_id"):
             log.info(f"Resolving {player['name']} ({player['riot_id']})...")
             player["puuid"], player["summoner_id"] = resolve_player(player["riot_id"])
             players_updated = True
@@ -292,7 +282,7 @@ def main():
             continue
         log.info(f"Fetching rank for {player['name']}...")
         try:
-            entry = get_league_entry(player["puuid"], player.get("summoner_id", ""))
+            entry = get_league_entry(player.get("summoner_id", ""))
             player["tier"] = entry.get("tier", "UNRANKED")
             player["rank"] = entry.get("rank", "")
             player["lp"] = entry.get("leaguePoints", 0)
