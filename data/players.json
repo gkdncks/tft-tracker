@@ -1,7 +1,19 @@
 {
   "players": [
-    { "name": "하우찬", "riot_id": "택택배#KR1" },
-    { "name": "윤세호", "riot_id": "삶은속이지않는다#KR1" },
-    { "name": "박성우", "riot_id": "successfulfeeder#KR1" }
+    {
+      "name": "하우찬",
+      "riot_id": "택택배#KR1",
+      "puuid": "8RpmMelLVEa1UNoYDowT1NJQbCM2BnWfEuqmTCNecwPO3EmVsQnx5wAtp_9g0pXL-v2nxgwC8L7ZNA"
+    },
+    {
+      "name": "윤세호",
+      "riot_id": "삶은속이지않는다#KR1",
+      "puuid": "qtEx39EAG9vJgNmO4jJ9xt-5ZEKUJkqQRqQMrn8hgUdbT-hEuijeCxX_vu_pW0sHSEZqHhEBSLJlig"
+    },
+    {
+      "name": "박성우",
+      "riot_id": "successfulfeeder#KR1",
+      "puuid": "3uibTlQlvkUBnN4eWRwVJUMMxcs83RuQBfX1pjd1L2AanBLTlZwT3DWYTnv4SLJvhnHlscstCVpTQA"
+    }
   ]
 }
