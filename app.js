@@ -16,6 +16,16 @@ const TIER_INFO = {
 
 const NO_RANK_TIERS = new Set(["MASTER", "GRANDMASTER", "CHALLENGER"]);
 
+// TFT 순번 라운드 → 스테이지-라운드 변환 (1-1, 2-3, 6-2 형식)
+// Stage 1: 3라운드, 이후 스테이지: 4라운드씩
+function toStageRound(n) {
+  if (n <= 3) return `1-${n}`;
+  const afterStage1 = n - 3;
+  const stage = Math.floor((afterStage1 - 1) / 4) + 2;
+  const roundInStage = ((afterStage1 - 1) % 4) + 1;
+  return `${stage}-${roundInStage}`;
+}
+
 function formatDuration(seconds) {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;
@@ -206,7 +216,7 @@ function renderRecentGames(stats, period) {
       <tr>
         <td><span class="place-badge ${placeBadgeClass(r.placement)}">${r.placement}위</span></td>
         <td class="match-player-name">${r.name}</td>
-        <td class="match-round">라운드 ${r.last_round}</td>
+        <td class="match-round">${toStageRound(r.last_round)}</td>
         <td class="match-time">${formatDuration(r.time_eliminated)}</td>
       </tr>`).join("");
 
