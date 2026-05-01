@@ -4,7 +4,807 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-01T02:26:18.613203+00:00",
+  "last_updated": "2026-05-01T03:15:44.307895+00:00",
+  "available_sets": [
+    17,
+    16
+  ],
+  "player_cards": {
+    "all": {
+      "하우찬": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 100,
+        "avg_placement": 4.21,
+        "top1_count": 9,
+        "top4_count": 55,
+        "top4_rate": 55.0,
+        "recent_placements": [
+          6,
+          1,
+          3,
+          1,
+          7,
+          5,
+          5,
+          2,
+          1,
+          8
+        ]
+      },
+      "윤세호": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 56,
+        "avg_placement": 4.07,
+        "top1_count": 5,
+        "top4_count": 33,
+        "top4_rate": 58.9,
+        "recent_placements": [
+          5,
+          2,
+          3,
+          2,
+          2,
+          2,
+          1,
+          3,
+          8,
+          4
+        ]
+      },
+      "박성우": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 107,
+        "avg_placement": 4.83,
+        "top1_count": 9,
+        "top4_count": 47,
+        "top4_rate": 43.9,
+        "recent_placements": [
+          2,
+          3,
+          6,
+          1,
+          4,
+          1,
+          4,
+          7,
+          1,
+          2
+        ]
+      }
+    },
+    "set_17": {
+      "하우찬": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 13,
+        "avg_placement": 4.23,
+        "top1_count": 3,
+        "top4_count": 6,
+        "top4_rate": 46.2,
+        "recent_placements": [
+          6,
+          1,
+          3,
+          1,
+          7,
+          5,
+          5,
+          2,
+          1,
+          8
+        ]
+      },
+      "윤세호": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 39,
+        "avg_placement": 3.97,
+        "top1_count": 4,
+        "top4_count": 24,
+        "top4_rate": 61.5,
+        "recent_placements": [
+          5,
+          2,
+          3,
+          2,
+          2,
+          2,
+          1,
+          3,
+          8,
+          4
+        ]
+      },
+      "박성우": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 37,
+        "avg_placement": 4.76,
+        "top1_count": 4,
+        "top4_count": 17,
+        "top4_rate": 45.9,
+        "recent_placements": [
+          2,
+          3,
+          6,
+          1,
+          4,
+          1,
+          4,
+          7,
+          1,
+          2
+        ]
+      }
+    },
+    "set_16": {
+      "하우찬": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 87,
+        "avg_placement": 4.21,
+        "top1_count": 6,
+        "top4_count": 49,
+        "top4_rate": 56.3,
+        "recent_placements": [
+          7,
+          5,
+          3,
+          6,
+          3,
+          1,
+          4,
+          2,
+          6,
+          1
+        ]
+      },
+      "윤세호": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 17,
+        "avg_placement": 4.29,
+        "top1_count": 1,
+        "top4_count": 9,
+        "top4_rate": 52.9,
+        "recent_placements": [
+          2,
+          6,
+          1,
+          4,
+          7,
+          3,
+          3,
+          6,
+          4,
+          7
+        ]
+      },
+      "박성우": {
+        "tier": "UNRANKED",
+        "rank": "",
+        "lp": 0,
+        "total_games": 70,
+        "avg_placement": 4.87,
+        "top1_count": 5,
+        "top4_count": 30,
+        "top4_rate": 42.9,
+        "recent_placements": [
+          7,
+          8,
+          5,
+          6,
+          5,
+          1,
+          5,
+          7,
+          6,
+          8
+        ]
+      }
+    }
+  },
+  "recent_shared_matches": [
+    {
+      "game_datetime": 1777468987958,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 5,
+          "last_round": 30,
+          "time_eliminated": 1705
+        },
+        {
+          "name": "박성우",
+          "placement": 7,
+          "last_round": 23,
+          "time_eliminated": 1336
+        }
+      ]
+    },
+    {
+      "game_datetime": 1777297924295,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 2,
+          "last_round": 38,
+          "time_eliminated": 2209
+        },
+        {
+          "name": "박성우",
+          "placement": 8,
+          "last_round": 27,
+          "time_eliminated": 1628
+        }
+      ]
+    },
+    {
+      "game_datetime": 1777294794424,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 2,
+          "last_round": 41,
+          "time_eliminated": 2476
+        },
+        {
+          "name": "박성우",
+          "placement": 6,
+          "last_round": 31,
+          "time_eliminated": 1884
+        }
+      ]
+    },
+    {
+      "game_datetime": 1777103502500,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 3,
+          "last_round": 34,
+          "time_eliminated": 1980
+        },
+        {
+          "name": "박성우",
+          "placement": 8,
+          "last_round": 21,
+          "time_eliminated": 1268
+        }
+      ]
+    },
+    {
+      "game_datetime": 1777101763658,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 5,
+          "last_round": 30,
+          "time_eliminated": 1791
+        },
+        {
+          "name": "박성우",
+          "placement": 6,
+          "last_round": 30,
+          "time_eliminated": 1775
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776955477391,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 3,
+          "last_round": 38,
+          "time_eliminated": 2264
+        },
+        {
+          "name": "윤세호",
+          "placement": 7,
+          "last_round": 28,
+          "time_eliminated": 1738
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776952953465,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 1,
+          "last_round": 38,
+          "time_eliminated": 2175
+        },
+        {
+          "name": "박성우",
+          "placement": 2,
+          "last_round": 38,
+          "time_eliminated": 2174
+        },
+        {
+          "name": "윤세호",
+          "placement": 6,
+          "last_round": 31,
+          "time_eliminated": 1804
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776950482471,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "박성우",
+          "placement": 2,
+          "last_round": 35,
+          "time_eliminated": 2028
+        },
+        {
+          "name": "윤세호",
+          "placement": 3,
+          "last_round": 34,
+          "time_eliminated": 1973
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776870947446,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 3,
+          "last_round": 33,
+          "time_eliminated": 1970
+        },
+        {
+          "name": "하우찬",
+          "placement": 7,
+          "last_round": 28,
+          "time_eliminated": 1726
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776869050664,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 5,
+          "last_round": 28,
+          "time_eliminated": 1627
+        },
+        {
+          "name": "윤세호",
+          "placement": 6,
+          "last_round": 28,
+          "time_eliminated": 1618
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776866940565,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 3,
+          "last_round": 34,
+          "time_eliminated": 1984
+        },
+        {
+          "name": "하우찬",
+          "placement": 5,
+          "last_round": 31,
+          "time_eliminated": 1824
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776864790885,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 2,
+          "last_round": 38,
+          "time_eliminated": 2253
+        },
+        {
+          "name": "윤세호",
+          "placement": 4,
+          "last_round": 31,
+          "time_eliminated": 1907
+        },
+        {
+          "name": "박성우",
+          "placement": 5,
+          "last_round": 30,
+          "time_eliminated": 1827
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776862388451,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 1,
+          "last_round": 34,
+          "time_eliminated": 1964
+        },
+        {
+          "name": "윤세호",
+          "placement": 5,
+          "last_round": 33,
+          "time_eliminated": 1887
+        },
+        {
+          "name": "박성우",
+          "placement": 8,
+          "last_round": 26,
+          "time_eliminated": 1507
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776782634922,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "박성우",
+          "placement": 5,
+          "last_round": 33,
+          "time_eliminated": 1917
+        },
+        {
+          "name": "윤세호",
+          "placement": 7,
+          "last_round": 31,
+          "time_eliminated": 1810
+        },
+        {
+          "name": "하우찬",
+          "placement": 8,
+          "last_round": 28,
+          "time_eliminated": 1673
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776779824702,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 2,
+          "last_round": 41,
+          "time_eliminated": 2343
+        },
+        {
+          "name": "하우찬",
+          "placement": 3,
+          "last_round": 38,
+          "time_eliminated": 2201
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776608402058,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 1,
+          "last_round": 38,
+          "time_eliminated": 2247
+        },
+        {
+          "name": "박성우",
+          "placement": 6,
+          "last_round": 28,
+          "time_eliminated": 1741
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776433342328,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 4,
+          "last_round": 31,
+          "time_eliminated": 1792
+        },
+        {
+          "name": "박성우",
+          "placement": 8,
+          "last_round": 26,
+          "time_eliminated": 1505
+        }
+      ]
+    },
+    {
+      "game_datetime": 1776347429953,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "박성우",
+          "placement": 4,
+          "last_round": 37,
+          "time_eliminated": 2213
+        },
+        {
+          "name": "윤세호",
+          "placement": 6,
+          "last_round": 34,
+          "time_eliminated": 2065
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775998555520,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 7,
+          "last_round": 27,
+          "time_eliminated": 1596
+        },
+        {
+          "name": "박성우",
+          "placement": 8,
+          "last_round": 26,
+          "time_eliminated": 1513
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775484019377,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 2,
+          "last_round": 35,
+          "time_eliminated": 2139
+        },
+        {
+          "name": "박성우",
+          "placement": 4,
+          "last_round": 33,
+          "time_eliminated": 2037
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775398728760,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 6,
+          "last_round": 28,
+          "time_eliminated": 1656
+        },
+        {
+          "name": "박성우",
+          "placement": 7,
+          "last_round": 26,
+          "time_eliminated": 1539
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775396626117,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 1,
+          "last_round": 35,
+          "time_eliminated": 2074
+        },
+        {
+          "name": "박성우",
+          "placement": 7,
+          "last_round": 26,
+          "time_eliminated": 1573
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775227307508,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 4,
+          "last_round": 34,
+          "time_eliminated": 1960
+        },
+        {
+          "name": "박성우",
+          "placement": 7,
+          "last_round": 30,
+          "time_eliminated": 1747
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775142612854,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 3,
+          "last_round": 33,
+          "time_eliminated": 1968
+        },
+        {
+          "name": "윤세호",
+          "placement": 7,
+          "last_round": 28,
+          "time_eliminated": 1696
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775140319460,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 1,
+          "last_round": 37,
+          "time_eliminated": 2229
+        },
+        {
+          "name": "박성우",
+          "placement": 2,
+          "last_round": 37,
+          "time_eliminated": 2228
+        },
+        {
+          "name": "윤세호",
+          "placement": 3,
+          "last_round": 35,
+          "time_eliminated": 2125
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775137290336,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "윤세호",
+          "placement": 3,
+          "last_round": 31,
+          "time_eliminated": 1824
+        },
+        {
+          "name": "박성우",
+          "placement": 5,
+          "last_round": 27,
+          "time_eliminated": 1655
+        }
+      ]
+    },
+    {
+      "game_datetime": 1775052969244,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "박성우",
+          "placement": 2,
+          "last_round": 33,
+          "time_eliminated": 1870
+        },
+        {
+          "name": "하우찬",
+          "placement": 4,
+          "last_round": 30,
+          "time_eliminated": 1736
+        },
+        {
+          "name": "윤세호",
+          "placement": 6,
+          "last_round": 27,
+          "time_eliminated": 1573
+        }
+      ]
+    },
+    {
+      "game_datetime": 1774967164247,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "하우찬",
+          "placement": 2,
+          "last_round": 40,
+          "time_eliminated": 2237
+        },
+        {
+          "name": "윤세호",
+          "placement": 4,
+          "last_round": 33,
+          "time_eliminated": 1911
+        },
+        {
+          "name": "박성우",
+          "placement": 6,
+          "last_round": 28,
+          "time_eliminated": 1640
+        }
+      ]
+    },
+    {
+      "game_datetime": 1774965032706,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "박성우",
+          "placement": 4,
+          "last_round": 34,
+          "time_eliminated": 1908
+        },
+        {
+          "name": "하우찬",
+          "placement": 6,
+          "last_round": 30,
+          "time_eliminated": 1692
+        },
+        {
+          "name": "윤세호",
+          "placement": 7,
+          "last_round": 28,
+          "time_eliminated": 1591
+        }
+      ]
+    },
+    {
+      "game_datetime": 1774962263550,
+      "set_number": 16,
+      "results": [
+        {
+          "name": "박성우",
+          "placement": 2,
+          "last_round": 35,
+          "time_eliminated": 2125
+        },
+        {
+          "name": "윤세호",
+          "placement": 5,
+          "last_round": 28,
+          "time_eliminated": 1740
+        }
+      ]
+    }
+  ],
   "today": {
     "하우찬": {
       "윤세호": {
@@ -152,6 +952,106 @@
         "draws": 0,
         "score": -24,
         "shared_games": 29
+      }
+    }
+  },
+  "set_17": {
+    "하우찬": {
+      "윤세호": {
+        "wins": 5,
+        "losses": 4,
+        "draws": 0,
+        "score": 8,
+        "shared_games": 9
+      },
+      "박성우": {
+        "wins": 3,
+        "losses": 1,
+        "draws": 0,
+        "score": 8,
+        "shared_games": 4
+      }
+    },
+    "윤세호": {
+      "하우찬": {
+        "wins": 4,
+        "losses": 5,
+        "draws": 0,
+        "score": -8,
+        "shared_games": 9
+      },
+      "박성우": {
+        "wins": 9,
+        "losses": 4,
+        "draws": 0,
+        "score": 22,
+        "shared_games": 13
+      }
+    },
+    "박성우": {
+      "하우찬": {
+        "wins": 1,
+        "losses": 3,
+        "draws": 0,
+        "score": -8,
+        "shared_games": 4
+      },
+      "윤세호": {
+        "wins": 4,
+        "losses": 9,
+        "draws": 0,
+        "score": -22,
+        "shared_games": 13
+      }
+    }
+  },
+  "set_16": {
+    "하우찬": {
+      "윤세호": {
+        "wins": 9,
+        "losses": 2,
+        "draws": 0,
+        "score": 15,
+        "shared_games": 11
+      },
+      "박성우": {
+        "wins": 14,
+        "losses": 12,
+        "draws": 0,
+        "score": 7,
+        "shared_games": 26
+      }
+    },
+    "윤세호": {
+      "하우찬": {
+        "wins": 2,
+        "losses": 9,
+        "draws": 0,
+        "score": -15,
+        "shared_games": 11
+      },
+      "박성우": {
+        "wins": 8,
+        "losses": 8,
+        "draws": 0,
+        "score": 2,
+        "shared_games": 16
+      }
+    },
+    "박성우": {
+      "하우찬": {
+        "wins": 12,
+        "losses": 14,
+        "draws": 0,
+        "score": -7,
+        "shared_games": 26
+      },
+      "윤세호": {
+        "wins": 8,
+        "losses": 8,
+        "draws": 0,
+        "score": -2,
+        "shared_games": 16
       }
     }
   }
