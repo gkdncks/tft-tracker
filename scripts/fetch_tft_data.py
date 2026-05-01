@@ -5,6 +5,7 @@ import time
 import logging
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -15,6 +16,7 @@ if not API_KEY:
 
 HEADERS = {"X-Riot-Token": API_KEY}
 ASIA_BASE = "https://asia.api.riotgames.com"
+KR_BASE = "https://kr.api.riotgames.com"
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 MATCH_RETENTION_DAYS = 90
@@ -41,8 +43,25 @@ def get_puuid(game_name: str, tag_line: str) -> str:
     return api_get(url)["puuid"]
 
 
-def get_match_ids(puuid: str, count: int = 20) -> list:
-    url = f"{ASIA_BASE}/tft/match/v1/matches/by-puuid/{puuid}/ids"
+def get_puuid_via_summoner(riot_id: str) -> str:
+    """Account API 대신 TFT Summoner API를 통해 PUUID를 가져옴 (KR 플랫폼 호환)"""
+    game_name, tag = riot_id.split("#", 1)
+    # 1단계: Account API로 PUUID 조회
+    puuid = get_puuid(game_name, tag)
+    log.info(f"  Account API PUUID: {puuid}")
+    time.sleep(REQUEST_DELAY)
+    # 2단계: KR Summoner API로 PUUID 검증 및 플랫폼 호환 PUUID 취득
+    encoded = quote(puuid, safe="")
+    summoner = api_get(f"{KR_BASE}/tft/summoner/v1/summoners/by-puuid/{encoded}")
+    platform_puuid = summoner["puuid"]
+    log.info(f"  Summoner API PUUID: {platform_puuid}")
+    log.info(f"  Summoner name: {summoner.get('name', '?')}, level: {summoner.get('summonerLevel', '?')}")
+    return platform_puuid
+
+
+def get_match_ids(puuid: str, count: int = 100) -> list:
+    encoded = quote(puuid, safe="")
+    url = f"{ASIA_BASE}/tft/match/v1/matches/by-puuid/{encoded}/ids"
     return api_get(url, params={"count": count})
 
 
@@ -165,7 +184,7 @@ def main():
         log.error("No players in data/players.json")
         return
 
-    # Resolve PUUIDs for any player that doesn't have one cached
+    # Resolve PUUIDs — always re-fetch to ensure KR-platform compatibility
     puuid_updated = False
     for player in players:
         if "puuid" not in player:
@@ -173,9 +192,8 @@ def main():
             if len(parts) != 2:
                 log.error(f"Invalid riot_id format for {player['name']}: {player['riot_id']}")
                 continue
-            game_name, tag = parts
-            log.info(f"Resolving PUUID for {player['name']} ({game_name}#{tag})...")
-            player["puuid"] = get_puuid(game_name, tag)
+            log.info(f"Resolving PUUID for {player['name']} ({player['riot_id']})...")
+            player["puuid"] = get_puuid_via_summoner(player["riot_id"])
             puuid_updated = True
             time.sleep(REQUEST_DELAY)
 
