@@ -189,7 +189,7 @@ def main():
             continue
         log.info(f"Fetching match list for {player['name']}...")
         try:
-            match_ids = get_match_ids(player["puuid"], count=20)
+            match_ids = get_match_ids(player["puuid"], count=100)
             time.sleep(REQUEST_DELAY)
             for match_id in match_ids:
                 if match_id in existing_ids:
