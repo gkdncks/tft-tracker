@@ -4,7 +4,7 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-01T08:27:29.198896+00:00",
+  "last_updated": "2026-05-01T08:42:14.734102+00:00",
   "available_sets": [
     17,
     16
@@ -12,9 +12,9 @@
   "player_cards": {
     "all": {
       "하우찬": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "IV",
+        "lp": 75,
         "total_games": 100,
         "avg_placement": 4.21,
         "top1_count": 9,
@@ -34,9 +34,9 @@
         ]
       },
       "윤세호": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "I",
+        "lp": 52,
         "total_games": 56,
         "avg_placement": 4.07,
         "top1_count": 5,
@@ -56,9 +56,9 @@
         ]
       },
       "박성우": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "IV",
+        "lp": 61,
         "total_games": 107,
         "avg_placement": 4.83,
         "top1_count": 9,
@@ -80,9 +80,9 @@
     },
     "set_17": {
       "하우찬": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "IV",
+        "lp": 75,
         "total_games": 13,
         "avg_placement": 4.23,
         "top1_count": 3,
@@ -102,9 +102,9 @@
         ]
       },
       "윤세호": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "I",
+        "lp": 52,
         "total_games": 39,
         "avg_placement": 3.97,
         "top1_count": 4,
@@ -124,9 +124,9 @@
         ]
       },
       "박성우": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "IV",
+        "lp": 61,
         "total_games": 37,
         "avg_placement": 4.76,
         "top1_count": 4,
@@ -148,9 +148,9 @@
     },
     "set_16": {
       "하우찬": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "IV",
+        "lp": 75,
         "total_games": 87,
         "avg_placement": 4.21,
         "top1_count": 6,
@@ -170,9 +170,9 @@
         ]
       },
       "윤세호": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "I",
+        "lp": 52,
         "total_games": 17,
         "avg_placement": 4.29,
         "top1_count": 1,
@@ -192,9 +192,9 @@
         ]
       },
       "박성우": {
-        "tier": "UNRANKED",
-        "rank": "",
-        "lp": 0,
+        "tier": "GOLD",
+        "rank": "IV",
+        "lp": 61,
         "total_games": 70,
         "avg_placement": 4.87,
         "top1_count": 5,
