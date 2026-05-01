@@ -180,7 +180,7 @@ def compute_stats(matches: dict, players: list) -> dict:
     Head-to-head scoring: score = (opponent_placement - my_placement) per shared game.
     Positive total = I outperformed the opponent overall.
     1st vs 8th = +7, 3rd vs 4th = +1 (margin matters).
-    Periods: today / week / all (time-based) + set_N (set-based).
+    Periods: today/week/all (all seasons) + set_N_today/set_N_week/set_N_all (per season).
     """
     puuid_map = {p["puuid"]: p["name"] for p in players if "puuid" in p}
     tracked = set(puuid_map.keys())
@@ -194,13 +194,18 @@ def compute_stats(matches: dict, players: list) -> dict:
         if m.get("info", {}).get("tft_set_number", 0) > 0
     ), reverse=True)
 
-    # (filter_type, filter_value): "time" → cutoff datetime | "set" → set number
-    periods = {
-        "today": ("time", now - timedelta(days=1)),
-        "week":  ("time", now - timedelta(days=7)),
-        "all":   ("time", None),
-        **{f"set_{s}": ("set", s) for s in available_sets},
+    # (time_cutoff, set_filter): both can apply simultaneously
+    time_cutoffs = {
+        "today": now - timedelta(days=1),
+        "week":  now - timedelta(days=7),
+        "all":   None,
     }
+    periods = {}
+    for tp, cutoff in time_cutoffs.items():
+        periods[tp] = (cutoff, None)
+    for s in available_sets:
+        for tp, cutoff in time_cutoffs.items():
+            periods[f"set_{s}_{tp}"] = (cutoff, s)
 
     def empty_h2h():
         return {"wins": 0, "losses": 0, "draws": 0, "score": 0, "shared_games": 0}
@@ -223,13 +228,11 @@ def compute_stats(matches: dict, players: list) -> dict:
             continue
         tracked_list = [(puuid_map[uid], place) for uid, place in in_game.items()]
 
-        for period, (ftype, fval) in periods.items():
-            if ftype == "time":
-                if fval and game_dt < fval:
-                    continue
-            else:  # set
-                if set_num != fval:
-                    continue
+        for period, (time_cutoff, set_filter) in periods.items():
+            if time_cutoff and game_dt < time_cutoff:
+                continue
+            if set_filter is not None and set_num != set_filter:
+                continue
 
             for i in range(len(tracked_list)):
                 for j in range(i + 1, len(tracked_list)):

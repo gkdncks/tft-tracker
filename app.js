@@ -38,32 +38,36 @@ function formatDate(ms) {
     " " + d.toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" });
 }
 
-// ── Tabs ──────────────────────────────────────────────────────────────────────
+// ── Season + Period helpers ───────────────────────────────────────────────────
 
-function buildSetTabs(stats) {
-  const nav = document.querySelector(".period-tabs");
+// stats.json key for H2H/leaderboard data
+function getStatsKey(season, period) {
+  if (season === "all") return period;          // "today", "week", "all"
+  return `${season}_${period}`;                 // "set_17_today", etc.
+}
+
+// player_cards key (time-agnostic, only filtered by set)
+function getCardKey(season) {
+  return season === "all" ? "all" : season;     // "all", "set_17", etc.
+}
+
+// ── Season Dropdown ───────────────────────────────────────────────────────────
+
+function buildSeasonDropdown(stats) {
+  const select = document.getElementById("season-select");
   const sets = stats.available_sets || [];
-  if (!sets.length) return;
-
-  const sep = document.createElement("span");
-  sep.className = "tab-sep";
-  sep.textContent = "|";
-  nav.appendChild(sep);
-
   sets.forEach((s) => {
-    const btn = document.createElement("button");
-    btn.className = "period-btn";
-    btn.dataset.period = `set_${s}`;
-    btn.textContent = `Set ${s}`;
-    nav.appendChild(btn);
+    const opt = document.createElement("option");
+    opt.value = `set_${s}`;
+    opt.textContent = `Set ${s}`;
+    select.appendChild(opt);
   });
 }
 
-// ── Player Cards ─────────────────────────────────────────────────────────────
+// ── Player Cards ──────────────────────────────────────────────────────────────
 
-function renderPlayerCards(stats, period) {
-  // time-based tabs → 'all' card data / set tabs → 'set_N' card data
-  const cardKey = period.startsWith("set_") ? period : "all";
+function renderPlayerCards(stats, season) {
+  const cardKey = getCardKey(season);
   const cards = stats.player_cards?.[cardKey] || {};
   const container = document.getElementById("player-cards");
 
@@ -119,13 +123,14 @@ function renderPlayerCards(stats, period) {
 
 // ── Leaderboard ───────────────────────────────────────────────────────────────
 
-function computeLeaderboard(stats, period) {
+function computeLeaderboard(stats, season, period) {
+  const key = getStatsKey(season, period);
   return stats.players
     .map((player) => {
       let totalScore = 0, totalWins = 0, totalLosses = 0, totalDraws = 0, totalGames = 0;
       stats.players.forEach((opp) => {
         if (opp === player) return;
-        const h2h = stats[period]?.[player]?.[opp];
+        const h2h = stats[key]?.[player]?.[opp];
         if (!h2h) return;
         totalScore += h2h.score;
         totalWins += h2h.wins;
@@ -138,8 +143,8 @@ function computeLeaderboard(stats, period) {
     .sort((a, b) => b.totalScore - a.totalScore || b.totalWins - a.totalWins);
 }
 
-function renderLeaderboard(stats, period) {
-  const rows = computeLeaderboard(stats, period);
+function renderLeaderboard(stats, season, period) {
+  const rows = computeLeaderboard(stats, season, period);
   const container = document.getElementById("leaderboard");
   if (rows.every((r) => r.totalGames === 0)) {
     container.innerHTML = '<p class="no-data">이 기간에 함께 플레이한 기록이 없습니다.</p>';
@@ -159,7 +164,8 @@ function renderLeaderboard(stats, period) {
 
 // ── H2H Matrix ────────────────────────────────────────────────────────────────
 
-function renderH2HMatrix(stats, period) {
+function renderH2HMatrix(stats, season, period) {
+  const key = getStatsKey(season, period);
   const players = stats.players;
   const container = document.getElementById("h2h-matrix");
   let html = '<div class="matrix-scroll"><table class="h2h-table"><thead><tr><th class="corner-cell"></th>';
@@ -171,7 +177,7 @@ function renderH2HMatrix(stats, period) {
       if (p1 === p2) {
         html += '<td class="self-cell">—</td>';
       } else {
-        const h2h = stats[period]?.[p1]?.[p2] ?? { wins: 0, losses: 0, draws: 0, score: 0, shared_games: 0 };
+        const h2h = stats[key]?.[p1]?.[p2] ?? { wins: 0, losses: 0, draws: 0, score: 0, shared_games: 0 };
         const cls = h2h.score > 0 ? "win" : h2h.score < 0 ? "loss" : "neutral";
         const sign = h2h.score > 0 ? "+" : "";
         const draws = h2h.draws > 0 ? ` ${h2h.draws}무` : "";
@@ -196,12 +202,11 @@ function placeBadgeClass(p) {
   return "place-bot";
 }
 
-function renderRecentGames(stats, period) {
+function renderRecentGames(stats, season) {
   let matches = stats.recent_shared_matches || [];
 
-  // 세트 탭 선택 시 해당 세트 경기만 표시
-  if (period.startsWith("set_")) {
-    const setNum = parseInt(period.replace("set_", ""), 10);
+  if (season !== "all") {
+    const setNum = parseInt(season.replace("set_", ""), 10);
     matches = matches.filter((m) => m.set_number === setNum);
   }
 
@@ -234,13 +239,53 @@ function renderRecentGames(stats, period) {
   }).join("");
 }
 
+// ── Add Player Modal ──────────────────────────────────────────────────────────
+
+function initAddPlayerModal() {
+  const modal = document.getElementById("add-player-modal");
+  const openBtn = document.getElementById("add-player-btn");
+  const closeBtn = document.getElementById("modal-close");
+  const generateBtn = document.getElementById("generate-json-btn");
+
+  openBtn.addEventListener("click", () => modal.classList.remove("hidden"));
+  closeBtn.addEventListener("click", () => closeModal());
+  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    document.getElementById("player-name").value = "";
+    document.getElementById("player-riot-id").value = "";
+    document.getElementById("json-preview").classList.add("hidden");
+  }
+
+  generateBtn.addEventListener("click", () => {
+    const name = document.getElementById("player-name").value.trim();
+    const riotId = document.getElementById("player-riot-id").value.trim();
+    if (!name || !riotId) {
+      alert("이름과 Riot ID를 모두 입력해주세요.");
+      return;
+    }
+    const snippet = JSON.stringify({
+      name,
+      riot_id: riotId,
+      puuid: "",
+      summoner_id: "",
+      tier: "UNRANKED",
+      rank: "",
+      lp: 0
+    }, null, 2);
+    document.getElementById("json-output").textContent = snippet;
+    document.getElementById("json-preview").classList.remove("hidden");
+  });
+}
+
 // ── Init ──────────────────────────────────────────────────────────────────────
 
-function renderAll(stats, period) {
-  renderPlayerCards(stats, period);
-  renderLeaderboard(stats, period);
-  renderH2HMatrix(stats, period);
-  renderRecentGames(stats, period);
+function renderAll(stats, season, period) {
+  renderPlayerCards(stats, season);
+  renderLeaderboard(stats, season, period);
+  renderH2HMatrix(stats, season, period);
+  renderRecentGames(stats, season);
 }
 
 async function init() {
@@ -252,10 +297,16 @@ async function init() {
         "최종 업데이트: " + new Date(stats.last_updated).toLocaleString("ko-KR");
     }
 
-    buildSetTabs(stats);
+    buildSeasonDropdown(stats);
 
+    let currentSeason = "all";
     let currentPeriod = "today";
-    renderAll(stats, currentPeriod);
+    renderAll(stats, currentSeason, currentPeriod);
+
+    document.getElementById("season-select").addEventListener("change", (e) => {
+      currentSeason = e.target.value;
+      renderAll(stats, currentSeason, currentPeriod);
+    });
 
     document.querySelector(".period-tabs").addEventListener("click", (e) => {
       const btn = e.target.closest(".period-btn");
@@ -263,8 +314,10 @@ async function init() {
       document.querySelectorAll(".period-btn").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       currentPeriod = btn.dataset.period;
-      renderAll(stats, currentPeriod);
+      renderAll(stats, currentSeason, currentPeriod);
     });
+
+    initAddPlayerModal();
   } catch (err) {
     const el = document.getElementById("error-banner");
     el.textContent = "데이터를 불러올 수 없습니다. GitHub Actions가 아직 실행되지 않았거나 players.json 설정이 필요합니다.";

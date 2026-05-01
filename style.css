@@ -14,13 +14,148 @@ body {
 
 /* ── Header ──────────────────────────────── */
 header {
-  padding: 2rem;
-  text-align: center;
+  padding: 1.2rem 2rem 1rem;
   background: #0d1524;
   border-bottom: 1px solid #1e2a3a;
 }
-header h1 { font-size: 2rem; color: #c89b3c; letter-spacing: 0.05em; }
-.subtitle { margin-top: 0.5rem; color: #64748b; font-size: 0.85rem; }
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 180px;
+}
+.header-right { justify-content: flex-end; }
+header h1 { font-size: 1.8rem; color: #c89b3c; letter-spacing: 0.05em; text-align: center; flex: 1; }
+.subtitle { margin-top: 0.5rem; color: #64748b; font-size: 0.85rem; text-align: center; }
+
+.season-label { font-size: 0.8rem; color: #64748b; white-space: nowrap; }
+.season-select {
+  background: #0f1829;
+  border: 1px solid #2d4a6e;
+  color: #c89b3c;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.season-select:hover, .season-select:focus { border-color: #c89b3c; }
+
+.btn-add-player {
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  border: 1px solid #2d4a6e;
+  color: #94a3b8;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+.btn-add-player:hover { border-color: #c89b3c; color: #c89b3c; }
+
+/* ── Modal ───────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+.modal {
+  background: #0f1829;
+  border: 1px solid #2d4a6e;
+  border-radius: 10px;
+  padding: 1.6rem;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.modal-header h3 { color: #c89b3c; font-size: 1.1rem; }
+.modal-close {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+.modal-close:hover { color: #e2e8f0; }
+.modal-desc { font-size: 0.83rem; color: #64748b; margin-bottom: 1.2rem; line-height: 1.5; }
+.modal-desc code { color: #94a3b8; font-size: 0.8rem; }
+.modal-form { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.modal-form label { font-size: 0.82rem; color: #94a3b8; }
+.modal-form input {
+  background: #0a0e1a;
+  border: 1px solid #2d4a6e;
+  color: #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.modal-form input:focus { border-color: #c89b3c; }
+.modal-form input::placeholder { color: #475569; }
+.btn-generate {
+  width: 100%;
+  padding: 0.55rem;
+  background: #1a2f4a;
+  border: 1px solid #c89b3c;
+  color: #c89b3c;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-bottom: 1rem;
+}
+.btn-generate:hover { background: #203a5c; }
+.json-preview { border-top: 1px solid #1e2a3a; padding-top: 1rem; }
+.json-hint { font-size: 0.8rem; color: #64748b; margin-bottom: 0.6rem; line-height: 1.5; }
+.json-hint code { color: #94a3b8; }
+#json-output {
+  background: #0a0e1a;
+  border: 1px solid #1e2a3a;
+  border-radius: 4px;
+  padding: 0.8rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  white-space: pre;
+  overflow-x: auto;
+  margin-bottom: 0.8rem;
+}
+.btn-github-edit {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  background: #1a2f4a;
+  border: 1px solid #2d4a6e;
+  color: #94a3b8;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.btn-github-edit:hover { border-color: #c89b3c; color: #c89b3c; }
 
 /* ── Layout ──────────────────────────────── */
 main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }

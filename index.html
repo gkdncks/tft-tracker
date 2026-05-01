@@ -9,20 +9,29 @@
 <body>
 
   <header>
-    <h1>TFT 친구 상대전적</h1>
+    <div class="header-top">
+      <div class="header-left">
+        <label for="season-select" class="season-label">시즌</label>
+        <select id="season-select" class="season-select">
+          <option value="all">전체 시즌</option>
+        </select>
+      </div>
+      <h1>TFT 친구 상대전적</h1>
+      <div class="header-right">
+        <button id="add-player-btn" class="btn-add-player">+ 플레이어 추가</button>
+      </div>
+    </div>
     <p id="last-updated" class="subtitle"></p>
   </header>
 
   <main>
     <div id="error-banner" class="error-banner hidden"></div>
 
-    <!-- 플레이어 카드 (기간 필터 무관) -->
     <section class="section" id="section-cards">
       <h2 class="section-title">플레이어 카드</h2>
       <div id="player-cards" class="cards-grid"></div>
     </section>
 
-    <!-- 기간 필터 -->
     <nav class="period-tabs" aria-label="기간 선택">
       <button class="period-btn active" data-period="today">오늘</button>
       <button class="period-btn" data-period="week">7일</button>
@@ -46,6 +55,29 @@
       <div id="recent-games"></div>
     </section>
   </main>
+
+  <!-- 플레이어 추가 모달 -->
+  <div id="add-player-modal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>플레이어 추가</h3>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+      <p class="modal-desc">새 플레이어 정보를 입력하면 <code>players.json</code>에 추가할 JSON을 생성합니다.<br>생성된 JSON을 GitHub에서 직접 붙여넣어 저장하세요.</p>
+      <div class="modal-form">
+        <label for="player-name">이름 (표시명)</label>
+        <input type="text" id="player-name" placeholder="예: 홍길동">
+        <label for="player-riot-id">Riot ID</label>
+        <input type="text" id="player-riot-id" placeholder="예: 게임이름#KR1">
+      </div>
+      <button id="generate-json-btn" class="btn-generate">JSON 생성</button>
+      <div id="json-preview" class="json-preview hidden">
+        <p class="json-hint"><code>data/players.json</code>의 <code>"players"</code> 배열 마지막에 쉼표 뒤에 아래 내용을 추가하세요:</p>
+        <pre id="json-output"></pre>
+        <a id="github-edit-link" href="https://github.com/gkdncks/tft-tracker/edit/main/data/players.json" target="_blank" class="btn-github-edit">GitHub에서 players.json 편집 →</a>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
