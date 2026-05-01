@@ -44,21 +44,35 @@ def get_puuid(game_name: str, tag_line: str) -> str:
 
 
 def resolve_player(riot_id: str) -> tuple:
-    """Returns (puuid, summoner_id) via Account API → KR Summoner API"""
+    """Returns (puuid, summoner_id) — summoner_id may be empty on newer API versions"""
     game_name, tag = riot_id.split("#", 1)
     puuid = get_puuid(game_name, tag)
     log.info(f"  Account PUUID: {puuid}")
     time.sleep(REQUEST_DELAY)
     summoner = api_get(f"{KR_BASE}/tft/summoner/v1/summoners/by-puuid/{quote(puuid, safe='')}")
-    log.info(f"  Summoner: {summoner.get('name', '?')}, lv.{summoner.get('summonerLevel', '?')}")
-    return summoner["puuid"], summoner["id"]
+    log.info(f"  lv.{summoner.get('summonerLevel', '?')}")
+    return summoner["puuid"], summoner.get("id", "")
 
 
-def get_league_entry(summoner_id: str) -> dict:
-    entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-summoner/{quote(summoner_id, safe='')}")
-    for e in entries:
-        if e.get("queueType") == "RANKED_TFT":
-            return e
+def get_league_entry(puuid: str, summoner_id: str = "") -> dict:
+    # 신규: PUUID 기반 엔드포인트 시도
+    try:
+        entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-puuid/{quote(puuid, safe='')}")
+        for e in entries:
+            if e.get("queueType") == "RANKED_TFT":
+                return e
+        return {}
+    except Exception:
+        pass
+    # 구버전 폴백: summoner ID 기반
+    if summoner_id:
+        try:
+            entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-summoner/{quote(summoner_id, safe='')}")
+            for e in entries:
+                if e.get("queueType") == "RANKED_TFT":
+                    return e
+        except Exception:
+            pass
     return {}
 
 
@@ -271,11 +285,11 @@ def main():
 
     # Fetch tier/rank for all players
     for player in players:
-        if "summoner_id" not in player:
+        if "puuid" not in player:
             continue
         log.info(f"Fetching rank for {player['name']}...")
         try:
-            entry = get_league_entry(player["summoner_id"])
+            entry = get_league_entry(player["puuid"], player.get("summoner_id", ""))
             player["tier"] = entry.get("tier", "UNRANKED")
             player["rank"] = entry.get("rank", "")
             player["lp"] = entry.get("leaguePoints", 0)
