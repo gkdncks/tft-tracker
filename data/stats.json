@@ -4,7 +4,7 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-01T09:09:15.409419+00:00",
+  "last_updated": "2026-05-01T09:26:50.307753+00:00",
   "available_sets": [
     17,
     16
@@ -18,7 +18,6 @@
         "total_games": 100,
         "avg_placement": 4.21,
         "top1_count": 9,
-        "top4_count": 55,
         "top4_rate": 55.0,
         "recent_placements": [
           6,
@@ -31,6 +30,24 @@
           2,
           1,
           8
+        ],
+        "shared": {
+          "total_games": 36,
+          "avg_placement": 3.86,
+          "top1_count": 4,
+          "top4_rate": 61.1
+        },
+        "shared_recent_placements": [
+          3,
+          1,
+          7,
+          5,
+          5,
+          2,
+          1,
+          8,
+          3,
+          7
         ]
       },
       "윤세호": {
@@ -40,7 +57,6 @@
         "total_games": 57,
         "avg_placement": 4.05,
         "top1_count": 5,
-        "top4_count": 34,
         "top4_rate": 59.6,
         "recent_placements": [
           3,
@@ -53,6 +69,24 @@
           1,
           3,
           8
+        ],
+        "shared": {
+          "total_games": 35,
+          "avg_placement": 4.2,
+          "top1_count": 2,
+          "top4_rate": 54.3
+        },
+        "shared_recent_placements": [
+          5,
+          2,
+          2,
+          3,
+          5,
+          7,
+          6,
+          3,
+          3,
+          6
         ]
       },
       "박성우": {
@@ -62,7 +96,6 @@
         "total_games": 107,
         "avg_placement": 4.83,
         "top1_count": 9,
-        "top4_count": 47,
         "top4_rate": 43.9,
         "recent_placements": [
           2,
@@ -75,6 +108,24 @@
           7,
           1,
           2
+        ],
+        "shared": {
+          "total_games": 45,
+          "avg_placement": 4.78,
+          "top1_count": 1,
+          "top4_rate": 46.7
+        },
+        "shared_recent_placements": [
+          7,
+          8,
+          6,
+          8,
+          6,
+          2,
+          2,
+          5,
+          8,
+          5
         ]
       }
     },
@@ -86,7 +137,6 @@
         "total_games": 13,
         "avg_placement": 4.23,
         "top1_count": 3,
-        "top4_count": 6,
         "top4_rate": 46.2,
         "recent_placements": [
           6,
@@ -99,6 +149,23 @@
           2,
           1,
           8
+        ],
+        "shared": {
+          "total_games": 9,
+          "avg_placement": 3.89,
+          "top1_count": 2,
+          "top4_rate": 55.6
+        },
+        "shared_recent_placements": [
+          3,
+          1,
+          7,
+          5,
+          5,
+          2,
+          1,
+          8,
+          3
         ]
       },
       "윤세호": {
@@ -108,7 +175,6 @@
         "total_games": 40,
         "avg_placement": 3.95,
         "top1_count": 4,
-        "top4_count": 25,
         "top4_rate": 62.5,
         "recent_placements": [
           3,
@@ -121,6 +187,24 @@
           1,
           3,
           8
+        ],
+        "shared": {
+          "total_games": 18,
+          "avg_placement": 4.11,
+          "top1_count": 1,
+          "top4_rate": 55.6
+        },
+        "shared_recent_placements": [
+          5,
+          2,
+          2,
+          3,
+          5,
+          7,
+          6,
+          3,
+          3,
+          6
         ]
       },
       "박성우": {
@@ -130,7 +214,6 @@
         "total_games": 37,
         "avg_placement": 4.76,
         "top1_count": 4,
-        "top4_count": 17,
         "top4_rate": 45.9,
         "recent_placements": [
           2,
@@ -143,6 +226,24 @@
           7,
           1,
           2
+        ],
+        "shared": {
+          "total_games": 13,
+          "avg_placement": 5.77,
+          "top1_count": 0,
+          "top4_rate": 23.1
+        },
+        "shared_recent_placements": [
+          7,
+          8,
+          6,
+          8,
+          6,
+          2,
+          2,
+          5,
+          8,
+          5
         ]
       }
     },
@@ -154,7 +255,6 @@
         "total_games": 87,
         "avg_placement": 4.21,
         "top1_count": 6,
-        "top4_count": 49,
         "top4_rate": 56.3,
         "recent_placements": [
           7,
@@ -167,6 +267,24 @@
           2,
           6,
           1
+        ],
+        "shared": {
+          "total_games": 27,
+          "avg_placement": 3.85,
+          "top1_count": 2,
+          "top4_rate": 63.0
+        },
+        "shared_recent_placements": [
+          7,
+          3,
+          1,
+          4,
+          2,
+          6,
+          1,
+          3,
+          6,
+          2
         ]
       },
       "윤세호": {
@@ -176,9 +294,26 @@
         "total_games": 17,
         "avg_placement": 4.29,
         "top1_count": 1,
-        "top4_count": 9,
         "top4_rate": 52.9,
         "recent_placements": [
+          2,
+          6,
+          1,
+          4,
+          7,
+          3,
+          3,
+          6,
+          4,
+          7
+        ],
+        "shared": {
+          "total_games": 17,
+          "avg_placement": 4.29,
+          "top1_count": 1,
+          "top4_rate": 52.9
+        },
+        "shared_recent_placements": [
           2,
           6,
           1,
@@ -198,7 +333,6 @@
         "total_games": 70,
         "avg_placement": 4.87,
         "top1_count": 5,
-        "top4_count": 30,
         "top4_rate": 42.9,
         "recent_placements": [
           7,
@@ -211,6 +345,24 @@
           7,
           6,
           8
+        ],
+        "shared": {
+          "total_games": 32,
+          "avg_placement": 4.38,
+          "top1_count": 1,
+          "top4_rate": 56.2
+        },
+        "shared_recent_placements": [
+          8,
+          4,
+          7,
+          7,
+          7,
+          2,
+          5,
+          2,
+          6,
+          4
         ]
       }
     }
