@@ -4,7 +4,7 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-01T03:15:44.307895+00:00",
+  "last_updated": "2026-05-01T08:12:12.463524+00:00",
   "available_sets": [
     17,
     16
@@ -955,7 +955,107 @@
       }
     }
   },
-  "set_17": {
+  "set_17_today": {
+    "하우찬": {
+      "윤세호": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    },
+    "윤세호": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    },
+    "박성우": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "윤세호": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    }
+  },
+  "set_17_week": {
+    "하우찬": {
+      "윤세호": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    },
+    "윤세호": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 5,
+        "losses": 0,
+        "draws": 0,
+        "score": 18,
+        "shared_games": 5
+      }
+    },
+    "박성우": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "윤세호": {
+        "wins": 0,
+        "losses": 5,
+        "draws": 0,
+        "score": -18,
+        "shared_games": 5
+      }
+    }
+  },
+  "set_17_all": {
     "하우찬": {
       "윤세호": {
         "wins": 5,
@@ -1005,7 +1105,107 @@
       }
     }
   },
-  "set_16": {
+  "set_16_today": {
+    "하우찬": {
+      "윤세호": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    },
+    "윤세호": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    },
+    "박성우": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "윤세호": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    }
+  },
+  "set_16_week": {
+    "하우찬": {
+      "윤세호": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    },
+    "윤세호": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "박성우": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    },
+    "박성우": {
+      "하우찬": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      },
+      "윤세호": {
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "score": 0,
+        "shared_games": 0
+      }
+    }
+  },
+  "set_16_all": {
     "하우찬": {
       "윤세호": {
         "wins": 9,
