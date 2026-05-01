@@ -24,7 +24,6 @@ header h1 { font-size: 2rem; color: #c89b3c; letter-spacing: 0.05em; }
 
 /* ── Layout ──────────────────────────────── */
 main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-
 .section { margin-bottom: 3rem; }
 .section-title { font-size: 1.2rem; color: #c89b3c; margin-bottom: 0.4rem; }
 .section-desc { font-size: 0.82rem; color: #64748b; margin-bottom: 1rem; }
@@ -43,6 +42,52 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 }
 .period-btn:hover { border-color: #c89b3c; color: #c89b3c; }
 .period-btn.active { background: #1a2f4a; color: #c89b3c; border-color: #c89b3c; }
+.tab-sep { color: #2d4a6e; padding: 0 0.25rem; align-self: center; }
+
+/* ── Player Cards ────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.player-card {
+  background: #0f1829;
+  border: 1px solid #1e2a3a;
+  border-top: 3px solid var(--tier-color, #475569);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+.card-name { font-size: 1.1rem; font-weight: 700; }
+.card-tier { font-size: 0.8rem; font-weight: 600; }
+.card-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.stat-block .stat-value { font-size: 1rem; font-weight: 700; }
+.stat-block .stat-label { font-size: 0.7rem; color: #64748b; margin-top: 0.2rem; }
+.stat-block .stat-value.gold { color: #c8aa6e; }
+.stat-block .stat-value.positive { color: #22c55e; }
+.card-recent { border-top: 1px solid #1e2a3a; padding-top: 0.8rem; }
+.recent-label { font-size: 0.72rem; color: #64748b; display: block; margin-bottom: 0.4rem; }
+.recent-forms { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+.form-badge {
+  width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 4px;
+  font-size: 0.75rem; font-weight: 700;
+}
+.form-1    { background: rgba(200, 154, 60, 0.3); color: #c89b3c; }
+.form-top4 { background: rgba(34, 197, 94, 0.2);  color: #22c55e; }
+.form-bot  { background: rgba(100, 116, 139, 0.2); color: #64748b; }
 
 /* ── Leaderboard ─────────────────────────── */
 .leaderboard-row {
@@ -72,18 +117,65 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .h2h-table th,
 .h2h-table td { border: 1px solid #1e2a3a; padding: 0.65rem 0.9rem; text-align: center; }
 .corner-cell { background: #0a0e1a; }
-.col-header,
-.row-header { background: #0f1829; color: #94a3b8; font-weight: 600; white-space: nowrap; }
+.col-header, .row-header { background: #0f1829; color: #94a3b8; font-weight: 600; white-space: nowrap; }
 .self-cell { background: #08101e; color: #1e2a3a; font-size: 1.2rem; }
 .h2h-cell { cursor: default; }
-.h2h-cell.win  { background: rgba(34,  197, 94,  0.12); }
-.h2h-cell.loss { background: rgba(239, 68,  68,  0.12); }
+.h2h-cell.win     { background: rgba(34,  197, 94,  0.12); }
+.h2h-cell.loss    { background: rgba(239, 68,  68,  0.12); }
 .h2h-cell.neutral { background: #0f1829; }
 .h2h-score { display: block; font-weight: 700; font-size: 1rem; }
 .h2h-cell.win  .h2h-score { color: #22c55e; }
 .h2h-cell.loss .h2h-score { color: #ef4444; }
 .h2h-cell.neutral .h2h-score { color: #64748b; }
 .h2h-record { display: block; font-size: 0.72rem; color: #64748b; margin-top: 0.15rem; }
+
+/* ── Recent Matches ──────────────────────── */
+.match-card {
+  background: #0f1829;
+  border: 1px solid #1e2a3a;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: #0d1524;
+  border-bottom: 1px solid #1e2a3a;
+}
+.match-date { font-size: 0.85rem; color: #94a3b8; }
+.match-set  { font-size: 0.78rem; color: #475569; }
+.match-table { width: 100%; border-collapse: collapse; }
+.match-table th {
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  color: #475569;
+  text-align: left;
+  border-bottom: 1px solid #1e2a3a;
+}
+.match-table td {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid #141e30;
+  font-size: 0.9rem;
+}
+.match-table tr:last-child td { border-bottom: none; }
+.match-player-name { font-weight: 600; }
+.match-round { color: #94a3b8; }
+.match-time  { color: #64748b; font-variant-numeric: tabular-nums; }
+
+/* 등수 배지 */
+.place-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.place-1    { background: rgba(200, 154, 60, 0.25); color: #c89b3c; }
+.place-top4 { background: rgba(34,  197, 94, 0.15); color: #22c55e; }
+.place-bot  { background: rgba(100, 116, 139, 0.15); color: #64748b; }
 
 /* ── Misc ────────────────────────────────── */
 .no-data { color: #475569; font-style: italic; }

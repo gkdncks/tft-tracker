@@ -20,7 +20,7 @@ KR_BASE = "https://kr.api.riotgames.com"
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 MATCH_RETENTION_DAYS = 90
-REQUEST_DELAY = 1.5  # seconds between API calls
+REQUEST_DELAY = 1.5
 
 
 def api_get(url, params=None):
@@ -43,25 +43,27 @@ def get_puuid(game_name: str, tag_line: str) -> str:
     return api_get(url)["puuid"]
 
 
-def get_puuid_via_summoner(riot_id: str) -> str:
-    """Account API 대신 TFT Summoner API를 통해 PUUID를 가져옴 (KR 플랫폼 호환)"""
+def resolve_player(riot_id: str) -> tuple:
+    """Returns (puuid, summoner_id) via Account API → KR Summoner API"""
     game_name, tag = riot_id.split("#", 1)
-    # 1단계: Account API로 PUUID 조회
     puuid = get_puuid(game_name, tag)
-    log.info(f"  Account API PUUID: {puuid}")
+    log.info(f"  Account PUUID: {puuid}")
     time.sleep(REQUEST_DELAY)
-    # 2단계: KR Summoner API로 PUUID 검증 및 플랫폼 호환 PUUID 취득
-    encoded = quote(puuid, safe="")
-    summoner = api_get(f"{KR_BASE}/tft/summoner/v1/summoners/by-puuid/{encoded}")
-    platform_puuid = summoner["puuid"]
-    log.info(f"  Summoner API PUUID: {platform_puuid}")
-    log.info(f"  Summoner name: {summoner.get('name', '?')}, level: {summoner.get('summonerLevel', '?')}")
-    return platform_puuid
+    summoner = api_get(f"{KR_BASE}/tft/summoner/v1/summoners/by-puuid/{quote(puuid, safe='')}")
+    log.info(f"  Summoner: {summoner.get('name', '?')}, lv.{summoner.get('summonerLevel', '?')}")
+    return summoner["puuid"], summoner["id"]
+
+
+def get_league_entry(summoner_id: str) -> dict:
+    entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-summoner/{quote(summoner_id, safe='')}")
+    for e in entries:
+        if e.get("queueType") == "RANKED_TFT":
+            return e
+    return {}
 
 
 def get_match_ids(puuid: str, count: int = 100) -> list:
-    encoded = quote(puuid, safe="")
-    url = f"{ASIA_BASE}/tft/match/v1/matches/by-puuid/{encoded}/ids"
+    url = f"{ASIA_BASE}/tft/match/v1/matches/by-puuid/{quote(puuid, safe='')}/ids"
     return api_get(url, params={"count": count})
 
 
@@ -90,51 +92,114 @@ def prune_matches(matches: dict) -> dict:
         datetime.now(timezone.utc) - timedelta(days=MATCH_RETENTION_DAYS)
     ).timestamp() * 1000
     pruned = {
-        mid: m
-        for mid, m in matches.items()
+        mid: m for mid, m in matches.items()
         if m.get("info", {}).get("game_datetime", 0) >= cutoff_ms
     }
     removed = len(matches) - len(pruned)
     if removed:
-        log.info(f"Pruned {removed} matches older than {MATCH_RETENTION_DAYS} days")
+        log.info(f"Pruned {removed} old matches")
     return pruned
+
+
+def compute_player_cards(matches: dict, players: list, set_filter: int = None) -> dict:
+    cards = {}
+    for player in players:
+        if "puuid" not in player:
+            continue
+        puuid = player["puuid"]
+        placements = []
+        for match in matches.values():
+            info = match.get("info", {})
+            if set_filter is not None and info.get("tft_set_number") != set_filter:
+                continue
+            for p in info.get("participants", []):
+                if p.get("puuid") == puuid:
+                    placements.append((info.get("game_datetime", 0), p["placement"]))
+                    break
+        placements.sort(reverse=True)
+        all_p = [p for _, p in placements]
+        cards[player["name"]] = {
+            "tier": player.get("tier", "UNRANKED"),
+            "rank": player.get("rank", ""),
+            "lp": player.get("lp", 0),
+            "total_games": len(all_p),
+            "avg_placement": round(sum(all_p) / len(all_p), 2) if all_p else 0,
+            "top1_count": sum(1 for p in all_p if p == 1),
+            "top4_count": sum(1 for p in all_p if p <= 4),
+            "top4_rate": round(sum(1 for p in all_p if p <= 4) / len(all_p) * 100, 1) if all_p else 0,
+            "recent_placements": all_p[:10],
+        }
+    return cards
+
+
+def compute_recent_shared_matches(matches: dict, players: list, limit: int = 30) -> list:
+    puuid_map = {p["puuid"]: p["name"] for p in players if "puuid" in p}
+    tracked = set(puuid_map.keys())
+
+    shared = []
+    for match in matches.values():
+        info = match.get("info", {})
+        results = []
+        for p in info.get("participants", []):
+            if p.get("puuid") not in tracked:
+                continue
+            results.append({
+                "name": puuid_map[p["puuid"]],
+                "placement": p.get("placement", 0),
+                "last_round": p.get("last_round", 0),
+                "time_eliminated": round(p.get("time_eliminated", 0)),
+            })
+        if len(results) >= 2:
+            results.sort(key=lambda x: x["placement"])
+            shared.append({
+                "game_datetime": info.get("game_datetime", 0),
+                "set_number": info.get("tft_set_number", 0),
+                "results": results,
+            })
+
+    shared.sort(key=lambda x: -x["game_datetime"])
+    return shared[:limit]
 
 
 def compute_stats(matches: dict, players: list) -> dict:
     """
-    Head-to-head scoring: when A and B are in the same game,
-    score = (B_placement - A_placement).
-    Positive score means A outperformed B in that game.
-    Cumulative score captures both win/loss and margin of victory.
-    Example: A=1st B=8th → A scores +7; A=3rd B=4th → A scores +1.
+    Head-to-head scoring: score = (opponent_placement - my_placement) per shared game.
+    Positive total = I outperformed the opponent overall.
+    1st vs 8th = +7, 3rd vs 4th = +1 (margin matters).
+    Periods: today / week / all (time-based) + set_N (set-based).
     """
     puuid_map = {p["puuid"]: p["name"] for p in players if "puuid" in p}
     tracked = set(puuid_map.keys())
     player_names = [p["name"] for p in players if "puuid" in p]
 
     now = datetime.now(timezone.utc)
+
+    available_sets = sorted(set(
+        m.get("info", {}).get("tft_set_number", 0)
+        for m in matches.values()
+        if m.get("info", {}).get("tft_set_number", 0) > 0
+    ), reverse=True)
+
+    # (filter_type, filter_value): "time" → cutoff datetime | "set" → set number
     periods = {
-        "today": now - timedelta(days=1),
-        "week": now - timedelta(days=7),
-        "all": None,
+        "today": ("time", now - timedelta(days=1)),
+        "week":  ("time", now - timedelta(days=7)),
+        "all":   ("time", None),
+        **{f"set_{s}": ("set", s) for s in available_sets},
     }
 
     def empty_h2h():
         return {"wins": 0, "losses": 0, "draws": 0, "score": 0, "shared_games": 0}
 
     def init_period():
-        return {
-            p1: {p2: empty_h2h() for p2 in player_names if p2 != p1}
-            for p1 in player_names
-        }
+        return {p1: {p2: empty_h2h() for p2 in player_names if p2 != p1} for p1 in player_names}
 
     period_data = {p: init_period() for p in periods}
 
     for match in matches.values():
         info = match.get("info", {})
-        game_dt = datetime.fromtimestamp(
-            info.get("game_datetime", 0) / 1000, tz=timezone.utc
-        )
+        game_dt = datetime.fromtimestamp(info.get("game_datetime", 0) / 1000, tz=timezone.utc)
+        set_num = info.get("tft_set_number", 0)
         in_game = {
             p["puuid"]: p["placement"]
             for p in info.get("participants", [])
@@ -142,17 +207,21 @@ def compute_stats(matches: dict, players: list) -> dict:
         }
         if len(in_game) < 2:
             continue
-
         tracked_list = [(puuid_map[uid], place) for uid, place in in_game.items()]
 
-        for period, cutoff in periods.items():
-            if cutoff and game_dt < cutoff:
-                continue
+        for period, (ftype, fval) in periods.items():
+            if ftype == "time":
+                if fval and game_dt < fval:
+                    continue
+            else:  # set
+                if set_num != fval:
+                    continue
+
             for i in range(len(tracked_list)):
                 for j in range(i + 1, len(tracked_list)):
                     name_a, place_a = tracked_list[i]
                     name_b, place_b = tracked_list[j]
-                    score = place_b - place_a  # positive → A did better
+                    score = place_b - place_a
 
                     period_data[period][name_a][name_b]["shared_games"] += 1
                     period_data[period][name_b][name_a]["shared_games"] += 1
@@ -169,9 +238,17 @@ def compute_stats(matches: dict, players: list) -> dict:
                         period_data[period][name_a][name_b]["draws"] += 1
                         period_data[period][name_b][name_a]["draws"] += 1
 
+    # Player cards per set + overall
+    player_cards = {"all": compute_player_cards(matches, players)}
+    for s in available_sets:
+        player_cards[f"set_{s}"] = compute_player_cards(matches, players, set_filter=s)
+
     return {
         "players": player_names,
         "last_updated": now.isoformat(),
+        "available_sets": available_sets,
+        "player_cards": player_cards,
+        "recent_shared_matches": compute_recent_shared_matches(matches, players),
         **period_data,
     }
 
@@ -179,27 +256,38 @@ def compute_stats(matches: dict, players: list) -> dict:
 def main():
     players_data = load_json("players.json")
     players = players_data.get("players", [])
-
     if not players:
         log.error("No players in data/players.json")
         return
 
-    # Resolve PUUIDs — always re-fetch to ensure KR-platform compatibility
-    puuid_updated = False
+    # Resolve PUUID + summoner_id for new players
+    players_updated = False
     for player in players:
-        if "puuid" not in player:
-            parts = player["riot_id"].split("#", 1)
-            if len(parts) != 2:
-                log.error(f"Invalid riot_id format for {player['name']}: {player['riot_id']}")
-                continue
-            log.info(f"Resolving PUUID for {player['name']} ({player['riot_id']})...")
-            player["puuid"] = get_puuid_via_summoner(player["riot_id"])
-            puuid_updated = True
+        if "puuid" not in player or "summoner_id" not in player:
+            log.info(f"Resolving {player['name']} ({player['riot_id']})...")
+            player["puuid"], player["summoner_id"] = resolve_player(player["riot_id"])
+            players_updated = True
             time.sleep(REQUEST_DELAY)
 
-    if puuid_updated:
+    # Fetch tier/rank for all players
+    for player in players:
+        if "summoner_id" not in player:
+            continue
+        log.info(f"Fetching rank for {player['name']}...")
+        try:
+            entry = get_league_entry(player["summoner_id"])
+            player["tier"] = entry.get("tier", "UNRANKED")
+            player["rank"] = entry.get("rank", "")
+            player["lp"] = entry.get("leaguePoints", 0)
+            players_updated = True
+        except Exception as e:
+            log.warning(f"  League data failed: {e}")
+        time.sleep(REQUEST_DELAY)
+
+    if players_updated:
         save_json("players.json", players_data)
 
+    # Fetch new matches
     matches = load_json("matches.json")
     existing_ids = set(matches.keys())
     new_count = 0
@@ -207,9 +295,9 @@ def main():
     for player in players:
         if "puuid" not in player:
             continue
-        log.info(f"Fetching match list for {player['name']}...")
+        log.info(f"Fetching matches for {player['name']}...")
         match_ids = get_match_ids(player["puuid"], count=100)
-        log.info(f"  Got {len(match_ids)} match IDs")
+        log.info(f"  Got {len(match_ids)} IDs")
         time.sleep(REQUEST_DELAY)
         for match_id in match_ids:
             if match_id in existing_ids:
@@ -221,7 +309,6 @@ def main():
             time.sleep(REQUEST_DELAY)
 
     log.info(f"Downloaded {new_count} new matches")
-
     matches = prune_matches(matches)
     save_json("matches.json", matches)
 
