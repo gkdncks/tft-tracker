@@ -64,7 +64,7 @@ def get_league_entry(puuid: str) -> dict:
     return {}
 
 
-def get_match_ids(puuid: str, count: int = 100) -> list:
+def get_match_ids(puuid: str, count: int = 30) -> list:
     url = f"{ASIA_BASE}/tft/match/v1/matches/by-puuid/{quote(puuid, safe='')}/ids"
     return api_get(url, params={"count": count})
 
@@ -301,7 +301,7 @@ def main():
         if "puuid" not in player:
             continue
         log.info(f"Fetching matches for {player['name']}...")
-        match_ids = get_match_ids(player["puuid"], count=100)
+        match_ids = get_match_ids(player["puuid"], count=30)
         log.info(f"  Got {len(match_ids)} IDs")
         time.sleep(REQUEST_DELAY)
         for match_id in match_ids:
