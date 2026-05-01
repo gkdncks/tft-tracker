@@ -4,7 +4,7 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-01T01:51:01.903282+00:00",
+  "last_updated": "2026-05-01T02:26:18.613203+00:00",
   "today": {
     "하우찬": {
       "윤세호": {
@@ -81,11 +81,11 @@
         "shared_games": 0
       },
       "박성우": {
-        "wins": 0,
+        "wins": 5,
         "losses": 0,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 18,
+        "shared_games": 5
       }
     },
     "박성우": {
@@ -98,60 +98,60 @@
       },
       "윤세호": {
         "wins": 0,
-        "losses": 0,
+        "losses": 5,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -18,
+        "shared_games": 5
       }
     }
   },
   "all": {
     "하우찬": {
       "윤세호": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 14,
+        "losses": 6,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 23,
+        "shared_games": 20
       },
       "박성우": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 17,
+        "losses": 13,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 15,
+        "shared_games": 30
       }
     },
     "윤세호": {
       "하우찬": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 6,
+        "losses": 14,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -23,
+        "shared_games": 20
       },
       "박성우": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 17,
+        "losses": 12,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 24,
+        "shared_games": 29
       }
     },
     "박성우": {
       "하우찬": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 13,
+        "losses": 17,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -15,
+        "shared_games": 30
       },
       "윤세호": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 12,
+        "losses": 17,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -24,
+        "shared_games": 29
       }
     }
   }
