@@ -56,11 +56,8 @@ def resolve_player(riot_id: str) -> tuple:
     return summoner["puuid"], summoner_id
 
 
-def get_league_entry(summoner_id: str) -> dict:
-    if not summoner_id:
-        log.warning("  summoner_id 없음 — 랭크 조회 불가")
-        return {}
-    entries = api_get(f"{KR_BASE}/tft/league/v1/entries/by-summoner/{quote(summoner_id, safe='')}")
+def get_league_entry(puuid: str) -> dict:
+    entries = api_get(f"{KR_BASE}/tft/league/v1/by-puuid/{quote(puuid, safe='')}")
     for e in entries:
         if e.get("queueType") == "RANKED_TFT":
             return e
@@ -283,7 +280,7 @@ def main():
             continue
         log.info(f"Fetching rank for {player['name']}...")
         try:
-            entry = get_league_entry(player.get("summoner_id", ""))
+            entry = get_league_entry(player["puuid"])
             player["tier"] = entry.get("tier", "UNRANKED")
             player["rank"] = entry.get("rank", "")
             player["lp"] = entry.get("leaguePoints", 0)
