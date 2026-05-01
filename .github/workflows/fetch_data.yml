@@ -1,0 +1,36 @@
+name: Fetch TFT Data
+
+on:
+  schedule:
+    - cron: "0 15 * * *"  # 매일 00:00 KST (= 15:00 UTC)
+  workflow_dispatch:       # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch TFT data
+        env:
+          RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
+        run: python scripts/fetch_tft_data.py
+
+      - name: Commit updated data
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add data/
+          git diff --staged --quiet || git commit -m "chore: update TFT data $(date -u '+%Y-%m-%d')"
+          git push

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFT 친구 상대전적</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>TFT 친구 상대전적</h1>
+    <p id="last-updated" class="subtitle"></p>
+  </header>
+
+  <main>
+    <div id="error-banner" class="error-banner hidden"></div>
+
+    <nav class="period-tabs" aria-label="기간 선택">
+      <button class="period-btn active" data-period="today">오늘</button>
+      <button class="period-btn" data-period="week">7일</button>
+      <button class="period-btn" data-period="all">전체</button>
+    </nav>
+
+    <section class="section" id="section-leaderboard">
+      <h2 class="section-title">종합 순위</h2>
+      <p class="section-desc">누적 점수 = 공동 게임에서 (상대 등수 − 내 등수)의 합계</p>
+      <div id="leaderboard"></div>
+    </section>
+
+    <section class="section" id="section-matrix">
+      <h2 class="section-title">1:1 상대전적 매트릭스</h2>
+      <p class="section-desc">행 플레이어 기준 점수. 셀에 마우스를 올리면 상세 전적을 볼 수 있습니다.</p>
+      <div id="h2h-matrix"></div>
+    </section>
+
+    <section class="section" id="section-recent">
+      <h2 class="section-title">최근 공동 경기</h2>
+      <div id="recent-games"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
