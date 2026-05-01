@@ -104,32 +104,48 @@ def prune_matches(matches: dict) -> dict:
 
 
 def compute_player_cards(matches: dict, players: list, set_filter: int = None) -> dict:
+    all_puuids = {p["puuid"] for p in players if "puuid" in p}
     cards = {}
     for player in players:
         if "puuid" not in player:
             continue
         puuid = player["puuid"]
         placements = []
+        shared_placements = []
         for match in matches.values():
             info = match.get("info", {})
             if set_filter is not None and info.get("tft_set_number") != set_filter:
                 continue
+            participants_puuids = {p.get("puuid") for p in info.get("participants", [])}
+            is_shared = len(all_puuids & participants_puuids) >= 2
             for p in info.get("participants", []):
                 if p.get("puuid") == puuid:
-                    placements.append((info.get("game_datetime", 0), p["placement"]))
+                    entry = (info.get("game_datetime", 0), p["placement"])
+                    placements.append(entry)
+                    if is_shared:
+                        shared_placements.append(entry)
                     break
         placements.sort(reverse=True)
+        shared_placements.sort(reverse=True)
         all_p = [p for _, p in placements]
+        sh_p = [p for _, p in shared_placements]
+
+        def stats(pl):
+            return {
+                "total_games": len(pl),
+                "avg_placement": round(sum(pl) / len(pl), 2) if pl else 0,
+                "top1_count": sum(1 for p in pl if p == 1),
+                "top4_rate": round(sum(1 for p in pl if p <= 4) / len(pl) * 100, 1) if pl else 0,
+            }
+
         cards[player["name"]] = {
             "tier": player.get("tier", "UNRANKED"),
             "rank": player.get("rank", ""),
             "lp": player.get("lp", 0),
-            "total_games": len(all_p),
-            "avg_placement": round(sum(all_p) / len(all_p), 2) if all_p else 0,
-            "top1_count": sum(1 for p in all_p if p == 1),
-            "top4_count": sum(1 for p in all_p if p <= 4),
-            "top4_rate": round(sum(1 for p in all_p if p <= 4) / len(all_p) * 100, 1) if all_p else 0,
+            **stats(all_p),
             "recent_placements": all_p[:10],
+            "shared": stats(sh_p),
+            "shared_recent_placements": sh_p[:10],
         }
     return cards
 

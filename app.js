@@ -62,6 +62,8 @@ function buildSeasonDropdown(stats) {
     opt.textContent = `Set ${s}`;
     select.appendChild(opt);
   });
+  // 가장 최신 시즌(첫 번째)을 기본값으로
+  if (sets.length > 0) select.value = `set_${sets[0]}`;
 }
 
 // ── Player Cards ──────────────────────────────────────────────────────────────
@@ -85,6 +87,12 @@ function renderPlayerCards(stats, season) {
       : `${tier.label} ${c.rank} ${c.lp}LP`;
 
     const forms = (c.recent_placements || []).map((p) => {
+      const cls = p === 1 ? "form-1" : p <= 4 ? "form-top4" : "form-bot";
+      return `<span class="form-badge ${cls}">${p}</span>`;
+    }).join("");
+
+    const sh = c.shared || {};
+    const shForms = (c.shared_recent_placements || []).map((p) => {
       const cls = p === 1 ? "form-1" : p <= 4 ? "form-top4" : "form-bot";
       return `<span class="form-badge ${cls}">${p}</span>`;
     }).join("");
@@ -116,6 +124,28 @@ function renderPlayerCards(stats, season) {
         <div class="card-recent">
           <span class="recent-label">최근 ${(c.recent_placements || []).length}게임</span>
           <div class="recent-forms">${forms}</div>
+        </div>
+        <div class="card-shared">
+          <div class="shared-label">공동경기</div>
+          <div class="card-stats shared-stats">
+            <div class="stat-block">
+              <div class="stat-value">${sh.avg_placement || "—"}위</div>
+              <div class="stat-label">평균 순위</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value gold">${sh.top1_count ?? "—"}회</div>
+              <div class="stat-label">1등</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value ${sh.top4_rate >= 50 ? "positive" : ""}">${sh.top4_rate ?? "—"}%</div>
+              <div class="stat-label">탑4율</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-value">${sh.total_games ?? "—"}</div>
+              <div class="stat-label">게임 수</div>
+            </div>
+          </div>
+          ${shForms ? `<div class="recent-forms shared-forms">${shForms}</div>` : ""}
         </div>
       </div>`;
   }).join("");
@@ -299,7 +329,7 @@ async function init() {
 
     buildSeasonDropdown(stats);
 
-    let currentSeason = "all";
+    let currentSeason = document.getElementById("season-select").value;
     let currentPeriod = "today";
     renderAll(stats, currentSeason, currentPeriod);
 
