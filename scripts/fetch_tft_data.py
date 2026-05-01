@@ -29,7 +29,9 @@ def api_get(url, params=None):
             log.warning(f"Rate limited. Waiting {wait}s...")
             time.sleep(wait)
             continue
-        resp.raise_for_status()
+        if not resp.ok:
+            log.error(f"HTTP {resp.status_code} for {url} | body: {resp.text}")
+            resp.raise_for_status()
         return resp.json()
     raise RuntimeError(f"Failed after 3 attempts: {url}")
 
