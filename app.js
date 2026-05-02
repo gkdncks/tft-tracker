@@ -257,11 +257,18 @@ function renderRecentGames(stats, season) {
   }
 
   container.innerHTML = matches.map((match) => {
-    const rows = match.results.map((r) => `
-      <tr>
-        <td><span class="place-badge ${placeBadgeClass(r.placement)}">${r.placement}위</span></td>
-        <td class="match-player-name">${r.name}</td>
-      </tr>`).join("");
+    const rows = match.results.map((r) => {
+      const traitBadges = (r.traits || []).map((t) => {
+        const label = t.name.replace(/^TFT\d+_/, "");
+        return `<span class="trait-badge trait-style-${t.style}" title="${label}">${label}</span>`;
+      }).join("");
+      return `
+        <tr>
+          <td><span class="place-badge ${placeBadgeClass(r.placement)}">${r.placement}위</span></td>
+          <td class="match-player-name">${r.name}</td>
+          <td class="match-traits">${traitBadges}</td>
+        </tr>`;
+    }).join("");
 
     return `
       <div class="match-card">
@@ -270,7 +277,7 @@ function renderRecentGames(stats, season) {
           <span class="match-set">Set ${match.set_number}</span>
         </div>
         <table class="match-table">
-          <thead><tr><th>순위</th><th>소환사</th></tr></thead>
+          <thead><tr><th>순위</th><th>소환사</th><th>시너지</th></tr></thead>
           <tbody>${rows}</tbody>
         </table>
       </div>`;
@@ -338,7 +345,7 @@ async function init() {
     buildSeasonDropdown(stats);
 
     let currentSeason = document.getElementById("season-select").value;
-    let currentPeriod = "today";
+    let currentPeriod = "all";
     renderAll(stats, currentSeason, currentPeriod);
 
     document.getElementById("season-select").addEventListener("change", (e) => {

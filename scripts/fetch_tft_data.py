@@ -167,11 +167,15 @@ def compute_recent_shared_matches(matches: dict, players: list, limit: int = 30)
         for p in info.get("participants", []):
             if p.get("puuid") not in tracked:
                 continue
+            active_traits = sorted(
+                [t for t in p.get("traits", []) if t.get("tier_current", 0) > 0],
+                key=lambda t: t.get("style", 0),
+                reverse=True,
+            )[:6]
             results.append({
                 "name": puuid_map[p["puuid"]],
                 "placement": p.get("placement", 0),
-                "last_round": p.get("last_round", 0),
-                "time_eliminated": round(p.get("time_eliminated", 0)),
+                "traits": [{"name": t["name"], "style": t.get("style", 0)} for t in active_traits],
             })
         if len(results) >= 2:
             results.sort(key=lambda x: x["placement"])
