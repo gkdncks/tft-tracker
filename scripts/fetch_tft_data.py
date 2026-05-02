@@ -294,7 +294,7 @@ def main():
     # Resolve PUUID + summoner_id for new players
     players_updated = False
     for player in players:
-        if not player.get("puuid") or not player.get("summoner_id"):
+        if not player.get("puuid"):
             log.info(f"Resolving {player['name']} ({player['riot_id']})...")
             player["puuid"], player["summoner_id"] = resolve_player(player["riot_id"])
             players_updated = True
