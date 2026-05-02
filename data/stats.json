@@ -4,7 +4,7 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-01T15:46:55.694931+00:00",
+  "last_updated": "2026-05-02T12:45:39.797608+00:00",
   "available_sets": [
     17,
     16
@@ -71,22 +71,22 @@
       "윤세호": {
         "tier": "PLATINUM",
         "rank": "III",
-        "lp": 10,
-        "total_games": 43,
-        "avg_placement": 3.81,
+        "lp": 30,
+        "total_games": 47,
+        "avg_placement": 3.89,
         "top1_count": 5,
-        "top4_rate": 65.1,
+        "top4_rate": 63.8,
         "recent_placements": [
+          3,
+          3,
+          7,
+          6,
           3,
           6,
           2,
           1,
           3,
-          5,
-          2,
-          3,
-          2,
-          2
+          5
         ],
         "shared": {
           "total_games": 35,
@@ -128,22 +128,22 @@
       "박성우": {
         "tier": "GOLD",
         "rank": "III",
-        "lp": 42,
-        "total_games": 30,
-        "avg_placement": 4.53,
-        "top1_count": 4,
-        "top4_rate": 50.0,
+        "lp": 75,
+        "total_games": 33,
+        "avg_placement": 4.52,
+        "top1_count": 5,
+        "top4_rate": 48.5,
         "recent_placements": [
+          6,
+          6,
+          1,
           2,
           3,
           2,
           3,
           6,
           1,
-          4,
-          1,
-          4,
-          7
+          4
         ],
         "shared": {
           "total_games": 45,
@@ -242,22 +242,22 @@
       "윤세호": {
         "tier": "PLATINUM",
         "rank": "III",
-        "lp": 10,
-        "total_games": 43,
-        "avg_placement": 3.81,
+        "lp": 30,
+        "total_games": 47,
+        "avg_placement": 3.89,
         "top1_count": 5,
-        "top4_rate": 65.1,
+        "top4_rate": 63.8,
         "recent_placements": [
+          3,
+          3,
+          7,
+          6,
           3,
           6,
           2,
           1,
           3,
-          5,
-          2,
-          3,
-          2,
-          2
+          5
         ],
         "shared": {
           "total_games": 18,
@@ -299,22 +299,22 @@
       "박성우": {
         "tier": "GOLD",
         "rank": "III",
-        "lp": 42,
-        "total_games": 29,
-        "avg_placement": 4.45,
-        "top1_count": 4,
-        "top4_rate": 51.7,
+        "lp": 75,
+        "total_games": 32,
+        "avg_placement": 4.44,
+        "top1_count": 5,
+        "top4_rate": 50.0,
         "recent_placements": [
+          6,
+          6,
+          1,
           2,
           3,
           2,
           3,
           6,
           1,
-          4,
-          1,
-          4,
-          7
+          4
         ],
         "shared": {
           "total_games": 13,
@@ -406,7 +406,7 @@
       "윤세호": {
         "tier": "PLATINUM",
         "rank": "III",
-        "lp": 10,
+        "lp": 30,
         "total_games": 0,
         "avg_placement": 0,
         "top1_count": 0,
@@ -441,7 +441,7 @@
       "박성우": {
         "tier": "GOLD",
         "rank": "III",
-        "lp": 42,
+        "lp": 75,
         "total_games": 1,
         "avg_placement": 7.0,
         "top1_count": 0,
@@ -487,14 +487,54 @@
         {
           "name": "윤세호",
           "placement": 5,
-          "last_round": 30,
-          "time_eliminated": 1705
+          "traits": [
+            {
+              "name": "TFT17_DRX",
+              "style": 4
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_MeleeTrait",
+              "style": 2
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 7,
-          "last_round": 23,
-          "time_eliminated": 1336
+          "traits": [
+            {
+              "name": "TFT17_Primordian",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ASTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_MeleeTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -505,14 +545,54 @@
         {
           "name": "윤세호",
           "placement": 2,
-          "last_round": 38,
-          "time_eliminated": 2209
+          "traits": [
+            {
+              "name": "TFT17_DRX",
+              "style": 4
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_MorganaUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 8,
-          "last_round": 27,
-          "time_eliminated": 1628
+          "traits": [
+            {
+              "name": "TFT17_DarkStar",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ZedUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_AssassinTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -523,14 +603,62 @@
         {
           "name": "윤세호",
           "placement": 2,
-          "last_round": 41,
-          "time_eliminated": 2476
+          "traits": [
+            {
+              "name": "TFT17_DRX",
+              "style": 4
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_MorganaUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 6,
-          "last_round": 31,
-          "time_eliminated": 1884
+          "traits": [
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_VexUniqueTrait",
+              "style": 3
+            }
+          ]
         }
       ]
     },
@@ -541,14 +669,58 @@
         {
           "name": "윤세호",
           "placement": 3,
-          "last_round": 34,
-          "time_eliminated": 1980
+          "traits": [
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_AssassinTrait",
+              "style": 2
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 8,
-          "last_round": 21,
-          "time_eliminated": 1268
+          "traits": [
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 2
+            },
+            {
+              "name": "TFT17_ADMIN",
+              "style": 1
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ManaTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -559,14 +731,58 @@
         {
           "name": "윤세호",
           "placement": 5,
-          "last_round": 30,
-          "time_eliminated": 1791
+          "traits": [
+            {
+              "name": "TFT17_ResistTank",
+              "style": 4
+            },
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_DRX",
+              "style": 1
+            },
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 6,
-          "last_round": 30,
-          "time_eliminated": 1775
+          "traits": [
+            {
+              "name": "TFT17_DRX",
+              "style": 4
+            },
+            {
+              "name": "TFT17_Primordian",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ASTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_MeleeTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -577,14 +793,54 @@
         {
           "name": "하우찬",
           "placement": 3,
-          "last_round": 38,
-          "time_eliminated": 2264
+          "traits": [
+            {
+              "name": "TFT17_DRX",
+              "style": 4
+            },
+            {
+              "name": "TFT17_Primordian",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ASTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_MeleeTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 7,
-          "last_round": 28,
-          "time_eliminated": 1738
+          "traits": [
+            {
+              "name": "TFT17_HPTank",
+              "style": 4
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_VexUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -595,20 +851,84 @@
         {
           "name": "하우찬",
           "placement": 1,
-          "last_round": 38,
-          "time_eliminated": 2175
+          "traits": [
+            {
+              "name": "TFT17_Fateweaver",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_AssassinTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DRX",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_Stargazer_Wolf",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 2,
-          "last_round": 38,
-          "time_eliminated": 2174
+          "traits": [
+            {
+              "name": "TFT17_RhaastUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ManaTrait",
+              "style": 2
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_PsyOps",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 6,
-          "last_round": 31,
-          "time_eliminated": 1804
+          "traits": [
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -619,14 +939,58 @@
         {
           "name": "박성우",
           "placement": 2,
-          "last_round": 35,
-          "time_eliminated": 2028
+          "traits": [
+            {
+              "name": "TFT17_DRX",
+              "style": 4
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 3,
-          "last_round": 34,
-          "time_eliminated": 1973
+          "traits": [
+            {
+              "name": "TFT17_DarkStar",
+              "style": 4
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_AssassinTrait",
+              "style": 2
+            },
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -637,14 +1001,58 @@
         {
           "name": "윤세호",
           "placement": 3,
-          "last_round": 33,
-          "time_eliminated": 1970
+          "traits": [
+            {
+              "name": "TFT17_DarkStar",
+              "style": 4
+            },
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_VexUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "하우찬",
           "placement": 7,
-          "last_round": 28,
-          "time_eliminated": 1726
+          "traits": [
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_RhaastUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 2
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -655,14 +1063,58 @@
         {
           "name": "하우찬",
           "placement": 5,
-          "last_round": 28,
-          "time_eliminated": 1627
+          "traits": [
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_RhaastUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 2
+            },
+            {
+              "name": "TFT17_DRX",
+              "style": 1
+            },
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 6,
-          "last_round": 28,
-          "time_eliminated": 1618
+          "traits": [
+            {
+              "name": "TFT17_AnimaSquad",
+              "style": 4
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ADMIN",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ASTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -673,14 +1125,62 @@
         {
           "name": "윤세호",
           "placement": 3,
-          "last_round": 34,
-          "time_eliminated": 1984
+          "traits": [
+            {
+              "name": "TFT17_DarkStar",
+              "style": 4
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "하우찬",
           "placement": 5,
-          "last_round": 31,
-          "time_eliminated": 1824
+          "traits": [
+            {
+              "name": "TFT17_RhaastUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DRX",
+              "style": 1
+            },
+            {
+              "name": "TFT17_Fateweaver",
+              "style": 1
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -691,20 +1191,88 @@
         {
           "name": "하우찬",
           "placement": 2,
-          "last_round": 38,
-          "time_eliminated": 2253
+          "traits": [
+            {
+              "name": "TFT17_RhaastUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ManaTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_PsyOps",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 4,
-          "last_round": 31,
-          "time_eliminated": 1907
+          "traits": [
+            {
+              "name": "TFT17_MissFortuneUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_MorganaUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_ASTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DRX",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 5,
-          "last_round": 30,
-          "time_eliminated": 1827
+          "traits": [
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 2
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_SummonTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -715,20 +1283,84 @@
         {
           "name": "하우찬",
           "placement": 1,
-          "last_round": 34,
-          "time_eliminated": 1964
+          "traits": [
+            {
+              "name": "TFT17_Timebreaker",
+              "style": 4
+            },
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 2
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 5,
-          "last_round": 33,
-          "time_eliminated": 1887
+          "traits": [
+            {
+              "name": "TFT17_Mecha",
+              "style": 4
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_SonaUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_MeleeTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_PsyOps",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 8,
-          "last_round": 26,
-          "time_eliminated": 1507
+          "traits": [
+            {
+              "name": "TFT17_Primordian",
+              "style": 4
+            },
+            {
+              "name": "TFT17_DRX",
+              "style": 1
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_MeleeTrait",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -739,20 +1371,88 @@
         {
           "name": "박성우",
           "placement": 5,
-          "last_round": 33,
-          "time_eliminated": 1917
+          "traits": [
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_MorganaUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_ADMIN",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 7,
-          "last_round": 31,
-          "time_eliminated": 1810
+          "traits": [
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_ADMIN",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_SummonTrait",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "하우찬",
           "placement": 8,
-          "last_round": 28,
-          "time_eliminated": 1673
+          "traits": [
+            {
+              "name": "TFT17_PsyOps",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ManaTrait",
+              "style": 2
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -763,14 +1463,50 @@
         {
           "name": "윤세호",
           "placement": 2,
-          "last_round": 41,
-          "time_eliminated": 2343
+          "traits": [
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_Stargazer_Wolf",
+              "style": 2
+            },
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "하우찬",
           "placement": 3,
-          "last_round": 38,
-          "time_eliminated": 2201
+          "traits": [
+            {
+              "name": "TFT17_Astronaut",
+              "style": 2
+            },
+            {
+              "name": "TFT17_APTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -781,14 +1517,50 @@
         {
           "name": "윤세호",
           "placement": 1,
-          "last_round": 38,
-          "time_eliminated": 2247
+          "traits": [
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_SonaUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShieldTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_ADMIN",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 6,
-          "last_round": 28,
-          "time_eliminated": 1741
+          "traits": [
+            {
+              "name": "TFT17_Timebreaker",
+              "style": 4
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 2
+            }
+          ]
         }
       ]
     },
@@ -799,14 +1571,62 @@
         {
           "name": "윤세호",
           "placement": 4,
-          "last_round": 31,
-          "time_eliminated": 1792
+          "traits": [
+            {
+              "name": "TFT17_RangedTrait",
+              "style": 4
+            },
+            {
+              "name": "TFT17_JhinUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 1
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 8,
-          "last_round": 26,
-          "time_eliminated": 1505
+          "traits": [
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_RhaastUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_AssassinTrait",
+              "style": 2
+            },
+            {
+              "name": "TFT17_DarkStar",
+              "style": 1
+            },
+            {
+              "name": "TFT17_FlexTrait",
+              "style": 1
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -817,14 +1637,62 @@
         {
           "name": "박성우",
           "placement": 4,
-          "last_round": 37,
-          "time_eliminated": 2213
+          "traits": [
+            {
+              "name": "TFT17_BlitzcrankUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_MorganaUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_VexUniqueTrait",
+              "style": 3
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 6,
-          "last_round": 34,
-          "time_eliminated": 2065
+          "traits": [
+            {
+              "name": "TFT17_Fateweaver",
+              "style": 4
+            },
+            {
+              "name": "TFT17_ShenUniqueTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 2
+            },
+            {
+              "name": "TFT17_Astronaut",
+              "style": 1
+            },
+            {
+              "name": "TFT17_DRX",
+              "style": 1
+            },
+            {
+              "name": "TFT17_SpaceGroove",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -835,14 +1703,50 @@
         {
           "name": "하우찬",
           "placement": 7,
-          "last_round": 27,
-          "time_eliminated": 1596
+          "traits": [
+            {
+              "name": "TFT16_Demacia",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Targon",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Heroic",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Juggernaut",
+              "style": 2
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 8,
-          "last_round": 26,
-          "time_eliminated": 1513
+          "traits": [
+            {
+              "name": "TFT16_Bilgewater",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Brawler",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Gunslinger",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -853,14 +1757,54 @@
         {
           "name": "윤세호",
           "placement": 2,
-          "last_round": 35,
-          "time_eliminated": 2139
+          "traits": [
+            {
+              "name": "TFT16_Magus",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Targon",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Emperor",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Shurima",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 4,
-          "last_round": 33,
-          "time_eliminated": 2037
+          "traits": [
+            {
+              "name": "TFT16_Vanquisher",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Warden",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Blacksmith",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_DarkinWeapon",
+              "style": 2
+            },
+            {
+              "name": "TFT16_ShadowIsles",
+              "style": 2
+            }
+          ]
         }
       ]
     },
@@ -871,14 +1815,54 @@
         {
           "name": "윤세호",
           "placement": 6,
-          "last_round": 28,
-          "time_eliminated": 1656
+          "traits": [
+            {
+              "name": "TFT16_Noxus",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Emperor",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Juggernaut",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Magus",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Shurima",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 7,
-          "last_round": 26,
-          "time_eliminated": 1539
+          "traits": [
+            {
+              "name": "TFT16_Brawler",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Noxus",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Invoker",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Yordle",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -889,14 +1873,58 @@
         {
           "name": "윤세호",
           "placement": 1,
-          "last_round": 35,
-          "time_eliminated": 2074
+          "traits": [
+            {
+              "name": "TFT16_Noxus",
+              "style": 5
+            },
+            {
+              "name": "TFT16_AatroxUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_KindredUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_DarkinWeapon",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Juggernaut",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Rapidfire",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 7,
-          "last_round": 26,
-          "time_eliminated": 1573
+          "traits": [
+            {
+              "name": "TFT16_Warden",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Blacksmith",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShadowIsles",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Vanquisher",
+              "style": 2
+            }
+          ]
         }
       ]
     },
@@ -907,14 +1935,62 @@
         {
           "name": "윤세호",
           "placement": 4,
-          "last_round": 34,
-          "time_eliminated": 1960
+          "traits": [
+            {
+              "name": "TFT16_Targon",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_KindredUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_DarkinWeapon",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Vanquisher",
+              "style": 2
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 7,
-          "last_round": 30,
-          "time_eliminated": 1747
+          "traits": [
+            {
+              "name": "TFT16_Brawler",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Blacksmith",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Glutton",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Soulbound",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Bilgewater",
+              "style": 2
+            }
+          ]
         }
       ]
     },
@@ -925,14 +2001,54 @@
         {
           "name": "하우찬",
           "placement": 3,
-          "last_round": 33,
-          "time_eliminated": 1968
+          "traits": [
+            {
+              "name": "TFT16_Magus",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Shurima",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Emperor",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_XerathUnique",
+              "style": 3
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 7,
-          "last_round": 28,
-          "time_eliminated": 1696
+          "traits": [
+            {
+              "name": "TFT16_Noxus",
+              "style": 4
+            },
+            {
+              "name": "TFT16_HexMech",
+              "style": 3
+            },
+            {
+              "name": "TFT16_DarkinWeapon",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Juggernaut",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -943,20 +2059,92 @@
         {
           "name": "하우찬",
           "placement": 1,
-          "last_round": 37,
-          "time_eliminated": 2229
+          "traits": [
+            {
+              "name": "TFT16_Noxus",
+              "style": 5
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_KindredUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Brawler",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Juggernaut",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 2,
-          "last_round": 37,
-          "time_eliminated": 2228
+          "traits": [
+            {
+              "name": "TFT16_Noxus",
+              "style": 5
+            },
+            {
+              "name": "TFT16_Emperor",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Brawler",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Juggernaut",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Magus",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 3,
-          "last_round": 35,
-          "time_eliminated": 2125
+          "traits": [
+            {
+              "name": "TFT16_Demacia",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Heroic",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Defender",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Sorcerer",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Yordle",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -967,14 +2155,62 @@
         {
           "name": "윤세호",
           "placement": 3,
-          "last_round": 31,
-          "time_eliminated": 1824
+          "traits": [
+            {
+              "name": "TFT16_Longshot",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Targon",
+              "style": 4
+            },
+            {
+              "name": "TFT16_KaisaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Soulbound",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Defender",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Demacia",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 5,
-          "last_round": 27,
-          "time_eliminated": 1655
+          "traits": [
+            {
+              "name": "TFT16_Bilgewater",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Glutton",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Soulbound",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Brawler",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Gunslinger",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -985,20 +2221,88 @@
         {
           "name": "박성우",
           "placement": 2,
-          "last_round": 33,
-          "time_eliminated": 1870
+          "traits": [
+            {
+              "name": "TFT16_Bilgewater",
+              "style": 5
+            },
+            {
+              "name": "TFT16_Blacksmith",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Glutton",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Soulbound",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Brawler",
+              "style": 2
+            }
+          ]
         },
         {
           "name": "하우찬",
           "placement": 4,
-          "last_round": 30,
-          "time_eliminated": 1736
+          "traits": [
+            {
+              "name": "TFT16_Noxus",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Rapidfire",
+              "style": 4
+            },
+            {
+              "name": "TFT16_KindredUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Juggernaut",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 6,
-          "last_round": 27,
-          "time_eliminated": 1573
+          "traits": [
+            {
+              "name": "TFT16_Targon",
+              "style": 4
+            },
+            {
+              "name": "TFT16_AatroxUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_KindredUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Soulbound",
+              "style": 3
+            }
+          ]
         }
       ]
     },
@@ -1009,20 +2313,88 @@
         {
           "name": "하우찬",
           "placement": 2,
-          "last_round": 40,
-          "time_eliminated": 2237
+          "traits": [
+            {
+              "name": "TFT16_Vanquisher",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShadowIsles",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Warden",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Magus",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 4,
-          "last_round": 33,
-          "time_eliminated": 1911
+          "traits": [
+            {
+              "name": "TFT16_Sorcerer",
+              "style": 4
+            },
+            {
+              "name": "TFT16_DarkChild",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Emperor",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Soulbound",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            }
+          ]
         },
         {
           "name": "박성우",
           "placement": 6,
-          "last_round": 28,
-          "time_eliminated": 1640
+          "traits": [
+            {
+              "name": "TFT16_Sorcerer",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Targon",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Blacksmith",
+              "style": 3
+            },
+            {
+              "name": "TFT16_DarkChild",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Heroic",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShyvanaUnique",
+              "style": 3
+            }
+          ]
         }
       ]
     },
@@ -1033,20 +2405,84 @@
         {
           "name": "박성우",
           "placement": 4,
-          "last_round": 34,
-          "time_eliminated": 1908
+          "traits": [
+            {
+              "name": "TFT16_Vanquisher",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Warden",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Blacksmith",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Chronokeeper",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Harvester",
+              "style": 3
+            },
+            {
+              "name": "TFT16_ShadowIsles",
+              "style": 2
+            }
+          ]
         },
         {
           "name": "하우찬",
           "placement": 6,
-          "last_round": 30,
-          "time_eliminated": 1692
+          "traits": [
+            {
+              "name": "TFT16_Targon",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Void",
+              "style": 4
+            },
+            {
+              "name": "TFT16_KaisaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Sorcerer",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Defender",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 7,
-          "last_round": 28,
-          "time_eliminated": 1591
+          "traits": [
+            {
+              "name": "TFT16_Ionia",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Rapidfire",
+              "style": 4
+            },
+            {
+              "name": "TFT16_KindredUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Slayer",
+              "style": 1
+            }
+          ]
         }
       ]
     },
@@ -1057,14 +2493,58 @@
         {
           "name": "박성우",
           "placement": 2,
-          "last_round": 35,
-          "time_eliminated": 2125
+          "traits": [
+            {
+              "name": "TFT16_AatroxUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Chronokeeper",
+              "style": 3
+            },
+            {
+              "name": "TFT16_SylasTrait",
+              "style": 3
+            },
+            {
+              "name": "TFT16_TheBoss",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Ionia",
+              "style": 2
+            },
+            {
+              "name": "TFT16_Brawler",
+              "style": 1
+            }
+          ]
         },
         {
           "name": "윤세호",
           "placement": 5,
-          "last_round": 28,
-          "time_eliminated": 1740
+          "traits": [
+            {
+              "name": "TFT16_Void",
+              "style": 4
+            },
+            {
+              "name": "TFT16_Blacksmith",
+              "style": 3
+            },
+            {
+              "name": "TFT16_KaisaUnique",
+              "style": 3
+            },
+            {
+              "name": "TFT16_Brawler",
+              "style": 1
+            },
+            {
+              "name": "TFT16_Longshot",
+              "style": 1
+            }
+          ]
         }
       ]
     }
@@ -1145,11 +2625,11 @@
         "shared_games": 0
       },
       "박성우": {
-        "wins": 5,
+        "wins": 3,
         "losses": 0,
         "draws": 0,
-        "score": 18,
-        "shared_games": 5
+        "score": 12,
+        "shared_games": 3
       }
     },
     "박성우": {
@@ -1162,10 +2642,10 @@
       },
       "윤세호": {
         "wins": 0,
-        "losses": 5,
+        "losses": 3,
         "draws": 0,
-        "score": -18,
-        "shared_games": 5
+        "score": -12,
+        "shared_games": 3
       }
     }
   },
@@ -1295,11 +2775,11 @@
         "shared_games": 0
       },
       "박성우": {
-        "wins": 5,
+        "wins": 3,
         "losses": 0,
         "draws": 0,
-        "score": 18,
-        "shared_games": 5
+        "score": 12,
+        "shared_games": 3
       }
     },
     "박성우": {
@@ -1312,10 +2792,10 @@
       },
       "윤세호": {
         "wins": 0,
-        "losses": 5,
+        "losses": 3,
         "draws": 0,
-        "score": -18,
-        "shared_games": 5
+        "score": -12,
+        "shared_games": 3
       }
     }
   },
