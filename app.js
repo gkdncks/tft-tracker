@@ -260,7 +260,8 @@ function renderRecentGames(stats, season, traitNames = {}) {
     const rows = match.results.map((r) => {
       const traitBadges = (r.traits || []).map((t) => {
         const label = traitNames[t.name] || t.name.replace(/^TFT\d+_/, "");
-        return `<span class="trait-badge trait-style-${t.style}" title="${label}">${label}</span>`;
+        const count = t.num_units ? `(${t.num_units})` : "";
+        return `<span class="trait-badge trait-style-${t.style}" title="${label}">${label}${count}</span>`;
       }).join("");
       return `
         <tr>

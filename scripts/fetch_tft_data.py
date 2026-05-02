@@ -175,7 +175,7 @@ def compute_recent_shared_matches(matches: dict, players: list, limit: int = 30)
             results.append({
                 "name": puuid_map[p["puuid"]],
                 "placement": p.get("placement", 0),
-                "traits": [{"name": t["name"], "style": t.get("style", 0)} for t in active_traits],
+                "traits": [{"name": t["name"], "style": t.get("style", 0), "num_units": t.get("num_units", 0)} for t in active_traits],
             })
         if len(results) >= 2:
             results.sort(key=lambda x: x["placement"])
