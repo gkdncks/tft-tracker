@@ -345,6 +345,21 @@ def main():
 
     stats = compute_stats(matches, players)
     save_json("stats.json", stats)
+
+    log.info("Fetching Korean trait names from Community Dragon...")
+    try:
+        resp = requests.get(
+            "https://raw.communitydragon.org/latest/cdragon/tft/ko_kr.json",
+            timeout=15,
+        )
+        resp.raise_for_status()
+        cdragon = resp.json()
+        trait_names = {t["apiName"]: t["name"] for t in cdragon.get("traits", [])}
+        save_json("trait_names.json", trait_names)
+        log.info(f"  Saved {len(trait_names)} trait names")
+    except Exception as e:
+        log.warning(f"  Failed to fetch trait names: {e}")
+
     log.info("Done!")
 
 

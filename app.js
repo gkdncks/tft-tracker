@@ -242,7 +242,7 @@ function placeBadgeClass(p) {
   return "place-bot";
 }
 
-function renderRecentGames(stats, season) {
+function renderRecentGames(stats, season, traitNames = {}) {
   let matches = stats.recent_shared_matches || [];
 
   if (season !== "all") {
@@ -259,7 +259,7 @@ function renderRecentGames(stats, season) {
   container.innerHTML = matches.map((match) => {
     const rows = match.results.map((r) => {
       const traitBadges = (r.traits || []).map((t) => {
-        const label = t.name.replace(/^TFT\d+_/, "");
+        const label = traitNames[t.name] || t.name.replace(/^TFT\d+_/, "");
         return `<span class="trait-badge trait-style-${t.style}" title="${label}">${label}</span>`;
       }).join("");
       return `
@@ -326,16 +326,19 @@ function initAddPlayerModal() {
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
-function renderAll(stats, season, period) {
+function renderAll(stats, season, period, traitNames) {
   renderPlayerCards(stats, season);
   renderLeaderboard(stats, season, period);
   renderH2HMatrix(stats, season, period);
-  renderRecentGames(stats, season);
+  renderRecentGames(stats, season, traitNames);
 }
 
 async function init() {
   try {
-    const stats = await fetch("data/stats.json").then((r) => r.json());
+    const [stats, traitNames] = await Promise.all([
+      fetch("data/stats.json").then((r) => r.json()),
+      fetch("data/trait_names.json").then((r) => r.json()).catch(() => ({})),
+    ]);
 
     if (stats.last_updated) {
       document.getElementById("last-updated").textContent =
@@ -346,11 +349,11 @@ async function init() {
 
     let currentSeason = document.getElementById("season-select").value;
     let currentPeriod = "all";
-    renderAll(stats, currentSeason, currentPeriod);
+    renderAll(stats, currentSeason, currentPeriod, traitNames);
 
     document.getElementById("season-select").addEventListener("change", (e) => {
       currentSeason = e.target.value;
-      renderAll(stats, currentSeason, currentPeriod);
+      renderAll(stats, currentSeason, currentPeriod, traitNames);
     });
 
     document.querySelector(".period-tabs").addEventListener("click", (e) => {
@@ -359,7 +362,7 @@ async function init() {
       document.querySelectorAll(".period-btn").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       currentPeriod = btn.dataset.period;
-      renderAll(stats, currentSeason, currentPeriod);
+      renderAll(stats, currentSeason, currentPeriod, traitNames);
     });
 
     initAddPlayerModal();
