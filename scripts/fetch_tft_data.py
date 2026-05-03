@@ -3,6 +3,7 @@ import json
 import requests
 import time
 import logging
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -111,6 +112,7 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
             continue
         puuid = player["puuid"]
         ranked, shared, shared_ranked = [], [], []
+        trait_counter: dict = {}
         for match in matches.values():
             info = match.get("info", {})
             if set_filter is not None and info.get("tft_set_number") != set_filter:
@@ -123,6 +125,13 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
                     entry = (info.get("game_datetime", 0), p["placement"])
                     if is_ranked:
                         ranked.append(entry)
+                        for t in p.get("traits", []):
+                            if t.get("tier_current", 0) > 0:
+                                name = t["name"]
+                                if name not in trait_counter:
+                                    trait_counter[name] = {"count": 0, "styles": []}
+                                trait_counter[name]["count"] += 1
+                                trait_counter[name]["styles"].append(t.get("style", 0))
                     if is_shared:
                         shared.append(entry)
                     if is_ranked and is_shared:
@@ -142,6 +151,16 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
                 "top4_rate": round(sum(1 for p in pl if p <= 4) / len(pl) * 100, 1) if pl else 0,
             }
 
+        top_traits = sorted(trait_counter.items(), key=lambda x: -x[1]["count"])[:3]
+        top_traits_list = [
+            {
+                "name": name,
+                "style": Counter(data["styles"]).most_common(1)[0][0],
+                "count": data["count"],
+            }
+            for name, data in top_traits
+        ]
+
         cards[player["name"]] = {
             "tier": player.get("tier", "UNRANKED"),
             "rank": player.get("rank", ""),
@@ -152,6 +171,7 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
             "shared_recent_placements": sh_p[:10],
             "shared_ranked": stats(sr_p),
             "shared_ranked_recent_placements": sr_p[:10],
+            "top_traits": top_traits_list,
         }
     return cards
 

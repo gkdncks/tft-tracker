@@ -66,7 +66,24 @@
                                                                                          8,
                                                                                          3,
                                                                                          3
-                                                                                     ]
+                                                                                     ],
+                                                 "top_traits":  [
+                                                                    {
+                                                                        "name":  "TFT16_Defender",
+                                                                        "style":  1,
+                                                                        "count":  25
+                                                                    },
+                                                                    {
+                                                                        "name":  "TFT16_Targon",
+                                                                        "style":  4,
+                                                                        "count":  24
+                                                                    },
+                                                                    {
+                                                                        "name":  "TFT16_Warden",
+                                                                        "style":  1,
+                                                                        "count":  19
+                                                                    }
+                                                                ]
                                              },
                                      "윤세호":  {
                                                  "tier":  "PLATINUM",
@@ -123,7 +140,24 @@
                                                                                          3,
                                                                                          3,
                                                                                          6
-                                                                                     ]
+                                                                                     ],
+                                                 "top_traits":  [
+                                                                    {
+                                                                        "name":  "TFT17_HPTank",
+                                                                        "style":  1,
+                                                                        "count":  30
+                                                                    },
+                                                                    {
+                                                                        "name":  "TFT17_TahmKenchUniqueTrait",
+                                                                        "style":  3,
+                                                                        "count":  29
+                                                                    },
+                                                                    {
+                                                                        "name":  "TFT17_ShenUniqueTrait",
+                                                                        "style":  3,
+                                                                        "count":  27
+                                                                    }
+                                                                ]
                                              },
                                      "박성우":  {
                                                  "tier":  "GOLD",
@@ -180,7 +214,24 @@
                                                                                          5,
                                                                                          8,
                                                                                          5
-                                                                                     ]
+                                                                                     ],
+                                                 "top_traits":  [
+                                                                    {
+                                                                        "name":  "TFT17_DarkStar",
+                                                                        "style":  1,
+                                                                        "count":  17
+                                                                    },
+                                                                    {
+                                                                        "name":  "TFT17_ShieldTank",
+                                                                        "style":  1,
+                                                                        "count":  16
+                                                                    },
+                                                                    {
+                                                                        "name":  "TFT17_FlexTrait",
+                                                                        "style":  1,
+                                                                        "count":  14
+                                                                    }
+                                                                ]
                                              }
                                  },
                          "set_17":  {
@@ -237,7 +288,24 @@
                                                                                             1,
                                                                                             8,
                                                                                             3
-                                                                                        ]
+                                                                                        ],
+                                                    "top_traits":  [
+                                                                       {
+                                                                           "name":  "TFT17_ResistTank",
+                                                                           "style":  1,
+                                                                           "count":  7
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_DRX",
+                                                                           "style":  1,
+                                                                           "count":  6
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_HPTank",
+                                                                           "style":  1,
+                                                                           "count":  5
+                                                                       }
+                                                                   ]
                                                 },
                                         "윤세호":  {
                                                     "tier":  "PLATINUM",
@@ -294,7 +362,24 @@
                                                                                             3,
                                                                                             3,
                                                                                             6
-                                                                                        ]
+                                                                                        ],
+                                                    "top_traits":  [
+                                                                       {
+                                                                           "name":  "TFT17_HPTank",
+                                                                           "style":  1,
+                                                                           "count":  30
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_TahmKenchUniqueTrait",
+                                                                           "style":  3,
+                                                                           "count":  29
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_ShenUniqueTrait",
+                                                                           "style":  3,
+                                                                           "count":  27
+                                                                       }
+                                                                   ]
                                                 },
                                         "박성우":  {
                                                     "tier":  "GOLD",
@@ -351,7 +436,24 @@
                                                                                             5,
                                                                                             8,
                                                                                             5
-                                                                                        ]
+                                                                                        ],
+                                                    "top_traits":  [
+                                                                       {
+                                                                           "name":  "TFT17_DarkStar",
+                                                                           "style":  1,
+                                                                           "count":  17
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_ShieldTank",
+                                                                           "style":  1,
+                                                                           "count":  16
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_FlexTrait",
+                                                                           "style":  1,
+                                                                           "count":  14
+                                                                       }
+                                                                   ]
                                                 }
                                     },
                          "set_16":  {
@@ -401,7 +503,24 @@
                                                                       },
                                                     "shared_ranked_recent_placements":  [
                                                                                             3
-                                                                                        ]
+                                                                                        ],
+                                                    "top_traits":  [
+                                                                       {
+                                                                           "name":  "TFT16_Defender",
+                                                                           "style":  1,
+                                                                           "count":  25
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT16_Targon",
+                                                                           "style":  4,
+                                                                           "count":  24
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT16_Brawler",
+                                                                           "style":  1,
+                                                                           "count":  19
+                                                                       }
+                                                                   ]
                                                 },
                                         "윤세호":  {
                                                     "tier":  "PLATINUM",
@@ -440,7 +559,10 @@
                                                                       },
                                                     "shared_ranked_recent_placements":  [
 
-                                                                                        ]
+                                                                                        ],
+                                                    "top_traits":  [
+
+                                                                   ]
                                                 },
                                         "박성우":  {
                                                     "tier":  "GOLD",
@@ -479,10 +601,477 @@
                                                                       },
                                                     "shared_ranked_recent_placements":  [
                                                                                             7
-                                                                                        ]
+                                                                                        ],
+                                                    "top_traits":  [
+                                                                       {
+                                                                           "name":  "TFT16_KaisaUnique",
+                                                                           "style":  3,
+                                                                           "count":  1
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT16_Longshot",
+                                                                           "style":  1,
+                                                                           "count":  1
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT16_Brawler",
+                                                                           "style":  2,
+                                                                           "count":  1
+                                                                       }
+                                                                   ]
                                                 }
                                     }
                      },
+    "today":  {
+                  "하우찬":  {
+                              "윤세호":  {
+                                          "wins":  0,
+                                          "losses":  0,
+                                          "draws":  0,
+                                          "score":  0,
+                                          "shared_games":  0
+                                      },
+                              "박성우":  {
+                                          "wins":  0,
+                                          "losses":  0,
+                                          "draws":  0,
+                                          "score":  0,
+                                          "shared_games":  0
+                                      }
+                          },
+                  "윤세호":  {
+                              "하우찬":  {
+                                          "wins":  0,
+                                          "losses":  0,
+                                          "draws":  0,
+                                          "score":  0,
+                                          "shared_games":  0
+                                      },
+                              "박성우":  {
+                                          "wins":  0,
+                                          "losses":  0,
+                                          "draws":  0,
+                                          "score":  0,
+                                          "shared_games":  0
+                                      }
+                          },
+                  "박성우":  {
+                              "하우찬":  {
+                                          "wins":  0,
+                                          "losses":  0,
+                                          "draws":  0,
+                                          "score":  0,
+                                          "shared_games":  0
+                                      },
+                              "윤세호":  {
+                                          "wins":  0,
+                                          "losses":  0,
+                                          "draws":  0,
+                                          "score":  0,
+                                          "shared_games":  0
+                                      }
+                          }
+              },
+    "week":  {
+                 "하우찬":  {
+                             "윤세호":  {
+                                         "wins":  0,
+                                         "losses":  0,
+                                         "draws":  0,
+                                         "score":  0,
+                                         "shared_games":  0
+                                     },
+                             "박성우":  {
+                                         "wins":  0,
+                                         "losses":  0,
+                                         "draws":  0,
+                                         "score":  0,
+                                         "shared_games":  0
+                                     }
+                         },
+                 "윤세호":  {
+                             "하우찬":  {
+                                         "wins":  0,
+                                         "losses":  0,
+                                         "draws":  0,
+                                         "score":  0,
+                                         "shared_games":  0
+                                     },
+                             "박성우":  {
+                                         "wins":  3,
+                                         "losses":  0,
+                                         "draws":  0,
+                                         "score":  12,
+                                         "shared_games":  3
+                                     }
+                         },
+                 "박성우":  {
+                             "하우찬":  {
+                                         "wins":  0,
+                                         "losses":  0,
+                                         "draws":  0,
+                                         "score":  0,
+                                         "shared_games":  0
+                                     },
+                             "윤세호":  {
+                                         "wins":  0,
+                                         "losses":  3,
+                                         "draws":  0,
+                                         "score":  -12,
+                                         "shared_games":  3
+                                     }
+                         }
+             },
+    "all":  {
+                "하우찬":  {
+                            "윤세호":  {
+                                        "wins":  14,
+                                        "losses":  6,
+                                        "draws":  0,
+                                        "score":  23,
+                                        "shared_games":  20
+                                    },
+                            "박성우":  {
+                                        "wins":  17,
+                                        "losses":  13,
+                                        "draws":  0,
+                                        "score":  15,
+                                        "shared_games":  30
+                                    }
+                        },
+                "윤세호":  {
+                            "하우찬":  {
+                                        "wins":  6,
+                                        "losses":  14,
+                                        "draws":  0,
+                                        "score":  -23,
+                                        "shared_games":  20
+                                    },
+                            "박성우":  {
+                                        "wins":  17,
+                                        "losses":  12,
+                                        "draws":  0,
+                                        "score":  24,
+                                        "shared_games":  29
+                                    }
+                        },
+                "박성우":  {
+                            "하우찬":  {
+                                        "wins":  13,
+                                        "losses":  17,
+                                        "draws":  0,
+                                        "score":  -15,
+                                        "shared_games":  30
+                                    },
+                            "윤세호":  {
+                                        "wins":  12,
+                                        "losses":  17,
+                                        "draws":  0,
+                                        "score":  -24,
+                                        "shared_games":  29
+                                    }
+                        }
+            },
+    "set_17_today":  {
+                         "하우찬":  {
+                                     "윤세호":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             },
+                                     "박성우":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             }
+                                 },
+                         "윤세호":  {
+                                     "하우찬":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             },
+                                     "박성우":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             }
+                                 },
+                         "박성우":  {
+                                     "하우찬":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             },
+                                     "윤세호":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             }
+                                 }
+                     },
+    "set_17_week":  {
+                        "하우찬":  {
+                                    "윤세호":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            },
+                                    "박성우":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            }
+                                },
+                        "윤세호":  {
+                                    "하우찬":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            },
+                                    "박성우":  {
+                                                "wins":  3,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  12,
+                                                "shared_games":  3
+                                            }
+                                },
+                        "박성우":  {
+                                    "하우찬":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            },
+                                    "윤세호":  {
+                                                "wins":  0,
+                                                "losses":  3,
+                                                "draws":  0,
+                                                "score":  -12,
+                                                "shared_games":  3
+                                            }
+                                }
+                    },
+    "set_17_all":  {
+                       "하우찬":  {
+                                   "윤세호":  {
+                                               "wins":  5,
+                                               "losses":  4,
+                                               "draws":  0,
+                                               "score":  8,
+                                               "shared_games":  9
+                                           },
+                                   "박성우":  {
+                                               "wins":  3,
+                                               "losses":  1,
+                                               "draws":  0,
+                                               "score":  8,
+                                               "shared_games":  4
+                                           }
+                               },
+                       "윤세호":  {
+                                   "하우찬":  {
+                                               "wins":  4,
+                                               "losses":  5,
+                                               "draws":  0,
+                                               "score":  -8,
+                                               "shared_games":  9
+                                           },
+                                   "박성우":  {
+                                               "wins":  9,
+                                               "losses":  4,
+                                               "draws":  0,
+                                               "score":  22,
+                                               "shared_games":  13
+                                           }
+                               },
+                       "박성우":  {
+                                   "하우찬":  {
+                                               "wins":  1,
+                                               "losses":  3,
+                                               "draws":  0,
+                                               "score":  -8,
+                                               "shared_games":  4
+                                           },
+                                   "윤세호":  {
+                                               "wins":  4,
+                                               "losses":  9,
+                                               "draws":  0,
+                                               "score":  -22,
+                                               "shared_games":  13
+                                           }
+                               }
+                   },
+    "set_16_today":  {
+                         "하우찬":  {
+                                     "윤세호":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             },
+                                     "박성우":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             }
+                                 },
+                         "윤세호":  {
+                                     "하우찬":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             },
+                                     "박성우":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             }
+                                 },
+                         "박성우":  {
+                                     "하우찬":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             },
+                                     "윤세호":  {
+                                                 "wins":  0,
+                                                 "losses":  0,
+                                                 "draws":  0,
+                                                 "score":  0,
+                                                 "shared_games":  0
+                                             }
+                                 }
+                     },
+    "set_16_week":  {
+                        "하우찬":  {
+                                    "윤세호":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            },
+                                    "박성우":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            }
+                                },
+                        "윤세호":  {
+                                    "하우찬":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            },
+                                    "박성우":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            }
+                                },
+                        "박성우":  {
+                                    "하우찬":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            },
+                                    "윤세호":  {
+                                                "wins":  0,
+                                                "losses":  0,
+                                                "draws":  0,
+                                                "score":  0,
+                                                "shared_games":  0
+                                            }
+                                }
+                    },
+    "set_16_all":  {
+                       "하우찬":  {
+                                   "윤세호":  {
+                                               "wins":  9,
+                                               "losses":  2,
+                                               "draws":  0,
+                                               "score":  15,
+                                               "shared_games":  11
+                                           },
+                                   "박성우":  {
+                                               "wins":  14,
+                                               "losses":  12,
+                                               "draws":  0,
+                                               "score":  7,
+                                               "shared_games":  26
+                                           }
+                               },
+                       "윤세호":  {
+                                   "하우찬":  {
+                                               "wins":  2,
+                                               "losses":  9,
+                                               "draws":  0,
+                                               "score":  -15,
+                                               "shared_games":  11
+                                           },
+                                   "박성우":  {
+                                               "wins":  8,
+                                               "losses":  8,
+                                               "draws":  0,
+                                               "score":  2,
+                                               "shared_games":  16
+                                           }
+                               },
+                       "박성우":  {
+                                   "하우찬":  {
+                                               "wins":  12,
+                                               "losses":  14,
+                                               "draws":  0,
+                                               "score":  -7,
+                                               "shared_games":  26
+                                           },
+                                   "윤세호":  {
+                                               "wins":  8,
+                                               "losses":  8,
+                                               "draws":  0,
+                                               "score":  -2,
+                                               "shared_games":  16
+                                           }
+                               }
+                   },
     "recent_shared_matches":  [
                                   {
                                       "game_datetime":  1777468987958,
@@ -2922,455 +3511,5 @@
                                                       }
                                                   ]
                                   }
-                              ],
-    "today":  {
-                  "하우찬":  {
-                              "윤세호":  {
-                                          "wins":  0,
-                                          "losses":  0,
-                                          "draws":  0,
-                                          "score":  0,
-                                          "shared_games":  0
-                                      },
-                              "박성우":  {
-                                          "wins":  0,
-                                          "losses":  0,
-                                          "draws":  0,
-                                          "score":  0,
-                                          "shared_games":  0
-                                      }
-                          },
-                  "윤세호":  {
-                              "하우찬":  {
-                                          "wins":  0,
-                                          "losses":  0,
-                                          "draws":  0,
-                                          "score":  0,
-                                          "shared_games":  0
-                                      },
-                              "박성우":  {
-                                          "wins":  0,
-                                          "losses":  0,
-                                          "draws":  0,
-                                          "score":  0,
-                                          "shared_games":  0
-                                      }
-                          },
-                  "박성우":  {
-                              "하우찬":  {
-                                          "wins":  0,
-                                          "losses":  0,
-                                          "draws":  0,
-                                          "score":  0,
-                                          "shared_games":  0
-                                      },
-                              "윤세호":  {
-                                          "wins":  0,
-                                          "losses":  0,
-                                          "draws":  0,
-                                          "score":  0,
-                                          "shared_games":  0
-                                      }
-                          }
-              },
-    "week":  {
-                 "하우찬":  {
-                             "윤세호":  {
-                                         "wins":  0,
-                                         "losses":  0,
-                                         "draws":  0,
-                                         "score":  0,
-                                         "shared_games":  0
-                                     },
-                             "박성우":  {
-                                         "wins":  0,
-                                         "losses":  0,
-                                         "draws":  0,
-                                         "score":  0,
-                                         "shared_games":  0
-                                     }
-                         },
-                 "윤세호":  {
-                             "하우찬":  {
-                                         "wins":  0,
-                                         "losses":  0,
-                                         "draws":  0,
-                                         "score":  0,
-                                         "shared_games":  0
-                                     },
-                             "박성우":  {
-                                         "wins":  3,
-                                         "losses":  0,
-                                         "draws":  0,
-                                         "score":  12,
-                                         "shared_games":  3
-                                     }
-                         },
-                 "박성우":  {
-                             "하우찬":  {
-                                         "wins":  0,
-                                         "losses":  0,
-                                         "draws":  0,
-                                         "score":  0,
-                                         "shared_games":  0
-                                     },
-                             "윤세호":  {
-                                         "wins":  0,
-                                         "losses":  3,
-                                         "draws":  0,
-                                         "score":  -12,
-                                         "shared_games":  3
-                                     }
-                         }
-             },
-    "all":  {
-                "하우찬":  {
-                            "윤세호":  {
-                                        "wins":  14,
-                                        "losses":  6,
-                                        "draws":  0,
-                                        "score":  23,
-                                        "shared_games":  20
-                                    },
-                            "박성우":  {
-                                        "wins":  17,
-                                        "losses":  13,
-                                        "draws":  0,
-                                        "score":  15,
-                                        "shared_games":  30
-                                    }
-                        },
-                "윤세호":  {
-                            "하우찬":  {
-                                        "wins":  6,
-                                        "losses":  14,
-                                        "draws":  0,
-                                        "score":  -23,
-                                        "shared_games":  20
-                                    },
-                            "박성우":  {
-                                        "wins":  17,
-                                        "losses":  12,
-                                        "draws":  0,
-                                        "score":  24,
-                                        "shared_games":  29
-                                    }
-                        },
-                "박성우":  {
-                            "하우찬":  {
-                                        "wins":  13,
-                                        "losses":  17,
-                                        "draws":  0,
-                                        "score":  -15,
-                                        "shared_games":  30
-                                    },
-                            "윤세호":  {
-                                        "wins":  12,
-                                        "losses":  17,
-                                        "draws":  0,
-                                        "score":  -24,
-                                        "shared_games":  29
-                                    }
-                        }
-            },
-    "set_17_today":  {
-                         "하우찬":  {
-                                     "윤세호":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             },
-                                     "박성우":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             }
-                                 },
-                         "윤세호":  {
-                                     "하우찬":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             },
-                                     "박성우":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             }
-                                 },
-                         "박성우":  {
-                                     "하우찬":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             },
-                                     "윤세호":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             }
-                                 }
-                     },
-    "set_17_week":  {
-                        "하우찬":  {
-                                    "윤세호":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            },
-                                    "박성우":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            }
-                                },
-                        "윤세호":  {
-                                    "하우찬":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            },
-                                    "박성우":  {
-                                                "wins":  3,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  12,
-                                                "shared_games":  3
-                                            }
-                                },
-                        "박성우":  {
-                                    "하우찬":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            },
-                                    "윤세호":  {
-                                                "wins":  0,
-                                                "losses":  3,
-                                                "draws":  0,
-                                                "score":  -12,
-                                                "shared_games":  3
-                                            }
-                                }
-                    },
-    "set_17_all":  {
-                       "하우찬":  {
-                                   "윤세호":  {
-                                               "wins":  5,
-                                               "losses":  4,
-                                               "draws":  0,
-                                               "score":  8,
-                                               "shared_games":  9
-                                           },
-                                   "박성우":  {
-                                               "wins":  3,
-                                               "losses":  1,
-                                               "draws":  0,
-                                               "score":  8,
-                                               "shared_games":  4
-                                           }
-                               },
-                       "윤세호":  {
-                                   "하우찬":  {
-                                               "wins":  4,
-                                               "losses":  5,
-                                               "draws":  0,
-                                               "score":  -8,
-                                               "shared_games":  9
-                                           },
-                                   "박성우":  {
-                                               "wins":  9,
-                                               "losses":  4,
-                                               "draws":  0,
-                                               "score":  22,
-                                               "shared_games":  13
-                                           }
-                               },
-                       "박성우":  {
-                                   "하우찬":  {
-                                               "wins":  1,
-                                               "losses":  3,
-                                               "draws":  0,
-                                               "score":  -8,
-                                               "shared_games":  4
-                                           },
-                                   "윤세호":  {
-                                               "wins":  4,
-                                               "losses":  9,
-                                               "draws":  0,
-                                               "score":  -22,
-                                               "shared_games":  13
-                                           }
-                               }
-                   },
-    "set_16_today":  {
-                         "하우찬":  {
-                                     "윤세호":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             },
-                                     "박성우":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             }
-                                 },
-                         "윤세호":  {
-                                     "하우찬":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             },
-                                     "박성우":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             }
-                                 },
-                         "박성우":  {
-                                     "하우찬":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             },
-                                     "윤세호":  {
-                                                 "wins":  0,
-                                                 "losses":  0,
-                                                 "draws":  0,
-                                                 "score":  0,
-                                                 "shared_games":  0
-                                             }
-                                 }
-                     },
-    "set_16_week":  {
-                        "하우찬":  {
-                                    "윤세호":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            },
-                                    "박성우":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            }
-                                },
-                        "윤세호":  {
-                                    "하우찬":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            },
-                                    "박성우":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            }
-                                },
-                        "박성우":  {
-                                    "하우찬":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            },
-                                    "윤세호":  {
-                                                "wins":  0,
-                                                "losses":  0,
-                                                "draws":  0,
-                                                "score":  0,
-                                                "shared_games":  0
-                                            }
-                                }
-                    },
-    "set_16_all":  {
-                       "하우찬":  {
-                                   "윤세호":  {
-                                               "wins":  9,
-                                               "losses":  2,
-                                               "draws":  0,
-                                               "score":  15,
-                                               "shared_games":  11
-                                           },
-                                   "박성우":  {
-                                               "wins":  14,
-                                               "losses":  12,
-                                               "draws":  0,
-                                               "score":  7,
-                                               "shared_games":  26
-                                           }
-                               },
-                       "윤세호":  {
-                                   "하우찬":  {
-                                               "wins":  2,
-                                               "losses":  9,
-                                               "draws":  0,
-                                               "score":  -15,
-                                               "shared_games":  11
-                                           },
-                                   "박성우":  {
-                                               "wins":  8,
-                                               "losses":  8,
-                                               "draws":  0,
-                                               "score":  2,
-                                               "shared_games":  16
-                                           }
-                               },
-                       "박성우":  {
-                                   "하우찬":  {
-                                               "wins":  12,
-                                               "losses":  14,
-                                               "draws":  0,
-                                               "score":  -7,
-                                               "shared_games":  26
-                                           },
-                                   "윤세호":  {
-                                               "wins":  8,
-                                               "losses":  8,
-                                               "draws":  0,
-                                               "score":  -2,
-                                               "shared_games":  16
-                                           }
-                               }
-                   }
+                              ]
 }

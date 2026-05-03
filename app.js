@@ -183,23 +183,34 @@ function computeLeaderboard(stats, season, period) {
     .sort((a, b) => b.totalScore - a.totalScore || b.totalWins - a.totalWins);
 }
 
-function renderLeaderboard(stats, season, period) {
+function renderLeaderboard(stats, season, period, traitNames = {}) {
   const rows = computeLeaderboard(stats, season, period);
+  const cardKey = getCardKey(season);
   const container = document.getElementById("leaderboard");
   if (rows.every((r) => r.totalGames === 0)) {
     container.innerHTML = '<p class="no-data">이 기간에 함께 플레이한 기록이 없습니다.</p>';
     return;
   }
-  container.innerHTML = rows.map((r, i) => `
+  container.innerHTML = rows.map((r, i) => {
+    const card = stats.player_cards?.[cardKey]?.[r.player] || {};
+    const traitBadges = (card.top_traits || []).map((t) => {
+      const label = traitNames[t.name] || t.name.replace(/^TFT\d+_/, "");
+      return `<span class="trait-badge trait-style-${t.style}" title="${label}(${t.count}게임)">${label}</span>`;
+    }).join("");
+    return `
     <div class="leaderboard-row rank-${i + 1}">
       <span class="rank">${i + 1}</span>
-      <span class="player-name">${r.player}</span>
+      <div class="leader-left">
+        <span class="player-name">${r.player}</span>
+        ${traitBadges ? `<span class="leader-traits">${traitBadges}</span>` : ""}
+      </div>
       <span class="record">${r.totalWins}승 ${r.totalLosses}패${r.totalDraws > 0 ? ` ${r.totalDraws}무` : ""}</span>
       <span class="games">(${r.totalGames}게임)</span>
       <span class="score ${r.totalScore > 0 ? "positive" : r.totalScore < 0 ? "negative" : ""}">
         ${r.totalScore > 0 ? "+" : ""}${r.totalScore}점
       </span>
-    </div>`).join("");
+    </div>`;
+  }).join("");
 }
 
 // ── H2H Matrix ────────────────────────────────────────────────────────────────
@@ -329,7 +340,7 @@ function initAddPlayerModal() {
 
 function renderAll(stats, season, period, traitNames) {
   renderPlayerCards(stats, season);
-  renderLeaderboard(stats, season, period);
+  renderLeaderboard(stats, season, period, traitNames);
   renderH2HMatrix(stats, season, period);
   renderRecentGames(stats, season, traitNames);
 }
