@@ -125,7 +125,7 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
                     if is_ranked:
                         ranked.append(entry)
                         for t in p.get("traits", []):
-                            if t.get("tier_current", 0) > 0 and t.get("style", 0) >= 2:
+                            if t.get("tier_current", 0) > 0 and t.get("style", 0) >= 2 and t.get("num_units", 0) >= 2:
                                 key = (t["name"], t.get("style", 0))
                                 trait_counter[key] = trait_counter.get(key, 0) + 1
                     if is_shared:
