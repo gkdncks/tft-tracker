@@ -3,7 +3,6 @@ import json
 import requests
 import time
 import logging
-from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -127,11 +126,8 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
                         ranked.append(entry)
                         for t in p.get("traits", []):
                             if t.get("tier_current", 0) > 0:
-                                name = t["name"]
-                                if name not in trait_counter:
-                                    trait_counter[name] = {"count": 0, "styles": []}
-                                trait_counter[name]["count"] += 1
-                                trait_counter[name]["styles"].append(t.get("style", 0))
+                                key = (t["name"], t.get("style", 0))
+                                trait_counter[key] = trait_counter.get(key, 0) + 1
                     if is_shared:
                         shared.append(entry)
                     if is_ranked and is_shared:
@@ -151,14 +147,10 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
                 "top4_rate": round(sum(1 for p in pl if p <= 4) / len(pl) * 100, 1) if pl else 0,
             }
 
-        top_traits = sorted(trait_counter.items(), key=lambda x: -x[1]["count"])[:3]
+        top_traits = sorted(trait_counter.items(), key=lambda x: -x[1])[:3]
         top_traits_list = [
-            {
-                "name": name,
-                "style": Counter(data["styles"]).most_common(1)[0][0],
-                "count": data["count"],
-            }
-            for name, data in top_traits
+            {"name": name, "style": style, "count": count}
+            for (name, style), count in top_traits
         ]
 
         cards[player["name"]] = {
