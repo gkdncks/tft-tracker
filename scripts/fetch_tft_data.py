@@ -147,7 +147,7 @@ def compute_player_cards(matches: dict, players: list, set_filter: int = None) -
                 "top4_rate": round(sum(1 for p in pl if p <= 4) / len(pl) * 100, 1) if pl else 0,
             }
 
-        top_traits = sorted(trait_counter.items(), key=lambda x: -x[1])[:3]
+        top_traits = sorted([(k, v) for k, v in trait_counter.items() if v >= 2], key=lambda x: -x[1])[:3]
         top_traits_list = [
             {"name": name, "style": style, "count": count}
             for (name, style), count in top_traits

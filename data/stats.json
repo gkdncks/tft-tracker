@@ -296,13 +296,13 @@
                                                                            "count":  5
                                                                        },
                                                                        {
-                                                                           "name":  "TFT17_SpaceGroove",
-                                                                           "style":  2,
+                                                                           "name":  "TFT17_DRX",
+                                                                           "style":  4,
                                                                            "count":  2
                                                                        },
                                                                        {
-                                                                           "name":  "TFT17_BlitzcrankUniqueTrait",
-                                                                           "style":  3,
+                                                                           "name":  "TFT17_Fateweaver",
+                                                                           "style":  4,
                                                                            "count":  2
                                                                        }
                                                                    ]
@@ -603,21 +603,7 @@
                                                                                             7
                                                                                         ],
                                                     "top_traits":  [
-                                                                       {
-                                                                           "name":  "TFT16_KaisaUnique",
-                                                                           "style":  3,
-                                                                           "count":  1
-                                                                       },
-                                                                       {
-                                                                           "name":  "TFT16_Void",
-                                                                           "style":  4,
-                                                                           "count":  1
-                                                                       },
-                                                                       {
-                                                                           "name":  "TFT16_Brawler",
-                                                                           "style":  2,
-                                                                           "count":  1
-                                                                       }
+
                                                                    ]
                                                 }
                                     }
