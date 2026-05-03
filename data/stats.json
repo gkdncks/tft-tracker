@@ -69,19 +69,19 @@
                                                                                      ],
                                                  "top_traits":  [
                                                                     {
-                                                                        "name":  "TFT16_Defender",
-                                                                        "style":  1,
-                                                                        "count":  25
-                                                                    },
-                                                                    {
                                                                         "name":  "TFT16_Targon",
                                                                         "style":  4,
                                                                         "count":  24
                                                                     },
                                                                     {
-                                                                        "name":  "TFT16_Juggernaut",
-                                                                        "style":  1,
-                                                                        "count":  18
+                                                                        "name":  "TFT16_ShyvanaUnique",
+                                                                        "style":  3,
+                                                                        "count":  15
+                                                                    },
+                                                                    {
+                                                                        "name":  "TFT16_Harvester",
+                                                                        "style":  3,
+                                                                        "count":  9
                                                                     }
                                                                 ]
                                              },
@@ -153,9 +153,9 @@
                                                                         "count":  27
                                                                     },
                                                                     {
-                                                                        "name":  "TFT17_HPTank",
-                                                                        "style":  1,
-                                                                        "count":  25
+                                                                        "name":  "TFT17_FioraUniqueTrait",
+                                                                        "style":  3,
+                                                                        "count":  22
                                                                     }
                                                                 ]
                                              },
@@ -217,19 +217,19 @@
                                                                                      ],
                                                  "top_traits":  [
                                                                     {
-                                                                        "name":  "TFT17_FlexTrait",
-                                                                        "style":  1,
-                                                                        "count":  14
+                                                                        "name":  "TFT17_TahmKenchUniqueTrait",
+                                                                        "style":  3,
+                                                                        "count":  7
                                                                     },
                                                                     {
-                                                                        "name":  "TFT17_AssassinTrait",
-                                                                        "style":  1,
-                                                                        "count":  12
+                                                                        "name":  "TFT17_RhaastUniqueTrait",
+                                                                        "style":  3,
+                                                                        "count":  6
                                                                     },
                                                                     {
-                                                                        "name":  "TFT17_ShieldTank",
-                                                                        "style":  1,
-                                                                        "count":  11
+                                                                        "name":  "TFT17_GravesTrait",
+                                                                        "style":  3,
+                                                                        "count":  5
                                                                     }
                                                                 ]
                                              }
@@ -291,19 +291,19 @@
                                                                                         ],
                                                     "top_traits":  [
                                                                        {
-                                                                           "name":  "TFT17_ResistTank",
-                                                                           "style":  1,
-                                                                           "count":  6
-                                                                       },
-                                                                       {
-                                                                           "name":  "TFT17_APTrait",
-                                                                           "style":  1,
-                                                                           "count":  5
-                                                                       },
-                                                                       {
                                                                            "name":  "TFT17_RhaastUniqueTrait",
                                                                            "style":  3,
                                                                            "count":  5
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_SpaceGroove",
+                                                                           "style":  2,
+                                                                           "count":  2
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT17_BlitzcrankUniqueTrait",
+                                                                           "style":  3,
+                                                                           "count":  2
                                                                        }
                                                                    ]
                                                 },
@@ -375,9 +375,9 @@
                                                                            "count":  27
                                                                        },
                                                                        {
-                                                                           "name":  "TFT17_HPTank",
-                                                                           "style":  1,
-                                                                           "count":  25
+                                                                           "name":  "TFT17_FioraUniqueTrait",
+                                                                           "style":  3,
+                                                                           "count":  22
                                                                        }
                                                                    ]
                                                 },
@@ -439,19 +439,19 @@
                                                                                         ],
                                                     "top_traits":  [
                                                                        {
-                                                                           "name":  "TFT17_FlexTrait",
-                                                                           "style":  1,
-                                                                           "count":  14
+                                                                           "name":  "TFT17_TahmKenchUniqueTrait",
+                                                                           "style":  3,
+                                                                           "count":  7
                                                                        },
                                                                        {
-                                                                           "name":  "TFT17_AssassinTrait",
-                                                                           "style":  1,
-                                                                           "count":  12
+                                                                           "name":  "TFT17_RhaastUniqueTrait",
+                                                                           "style":  3,
+                                                                           "count":  6
                                                                        },
                                                                        {
-                                                                           "name":  "TFT17_ShieldTank",
-                                                                           "style":  1,
-                                                                           "count":  11
+                                                                           "name":  "TFT17_GravesTrait",
+                                                                           "style":  3,
+                                                                           "count":  5
                                                                        }
                                                                    ]
                                                 }
@@ -506,19 +506,19 @@
                                                                                         ],
                                                     "top_traits":  [
                                                                        {
-                                                                           "name":  "TFT16_Defender",
-                                                                           "style":  1,
-                                                                           "count":  25
-                                                                       },
-                                                                       {
                                                                            "name":  "TFT16_Targon",
                                                                            "style":  4,
                                                                            "count":  24
                                                                        },
                                                                        {
-                                                                           "name":  "TFT16_Juggernaut",
-                                                                           "style":  1,
-                                                                           "count":  18
+                                                                           "name":  "TFT16_ShyvanaUnique",
+                                                                           "style":  3,
+                                                                           "count":  15
+                                                                       },
+                                                                       {
+                                                                           "name":  "TFT16_Harvester",
+                                                                           "style":  3,
+                                                                           "count":  9
                                                                        }
                                                                    ]
                                                 },
@@ -604,13 +604,13 @@
                                                                                         ],
                                                     "top_traits":  [
                                                                        {
-                                                                           "name":  "TFT16_Void",
-                                                                           "style":  4,
+                                                                           "name":  "TFT16_KaisaUnique",
+                                                                           "style":  3,
                                                                            "count":  1
                                                                        },
                                                                        {
-                                                                           "name":  "TFT16_KaisaUnique",
-                                                                           "style":  3,
+                                                                           "name":  "TFT16_Void",
+                                                                           "style":  4,
                                                                            "count":  1
                                                                        },
                                                                        {
