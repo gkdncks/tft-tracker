@@ -333,6 +333,54 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
 .place-top4 { background: rgba(34,  197, 94, 0.15); color: #22c55e; }
 .place-bot  { background: rgba(100, 116, 139, 0.15); color: #64748b; }
 
+/* ── Mobile ──────────────────────────────── */
+@media (max-width: 600px) {
+  /* Header: 타이틀 위, 시즌+버튼 아래 */
+  header { padding: 0.8rem 1rem 0.7rem; }
+  .header-top { flex-wrap: wrap; gap: 0.5rem; }
+  header h1 { order: -1; width: 100%; font-size: 1.3rem; margin-bottom: 0.1rem; }
+  .header-left, .header-right { min-width: unset; }
+  .header-right { flex: 1; justify-content: flex-end; }
+
+  /* Layout */
+  main { padding: 1rem; }
+  .section { margin-bottom: 2rem; }
+
+  /* Period tabs */
+  .period-tabs { gap: 0.3rem; }
+  .period-btn { padding: 0.45rem 0; flex: 1; text-align: center; font-size: 0.88rem; }
+
+  /* Player Cards: 1열 */
+  .cards-grid { grid-template-columns: 1fr; }
+
+  /* Leaderboard: 2행 grid */
+  .leaderboard-row {
+    display: grid;
+    grid-template-columns: 2.2rem 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 0.5rem;
+    row-gap: 0.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .rank        { grid-column: 1; grid-row: 1 / 3; align-self: center; }
+  .leader-left { grid-column: 2 / 4; grid-row: 1; }
+  .record      { grid-column: 2; grid-row: 2; font-size: 0.8rem; }
+  .games       { display: none; }
+  .score       { grid-column: 3; grid-row: 2; font-size: 0.88rem; }
+
+  /* H2H: 셀 패딩 축소 */
+  .h2h-table th,
+  .h2h-table td { padding: 0.4rem 0.5rem; font-size: 0.8rem; }
+  .h2h-score { font-size: 0.88rem; }
+  .h2h-record { font-size: 0.66rem; }
+
+  /* Recent matches */
+  .match-table th,
+  .match-table td { padding: 0.35rem 0.6rem; font-size: 0.82rem; }
+  .match-traits { padding: 0.2rem 0.6rem; }
+  .trait-badge { font-size: 0.68rem; padding: 0.05rem 0.3rem; }
+}
+
 /* ── Misc ────────────────────────────────── */
 .no-data { color: #475569; font-style: italic; }
 .error-banner {
