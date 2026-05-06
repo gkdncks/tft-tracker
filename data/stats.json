@@ -4,7 +4,7 @@
     "윤세호",
     "박성우"
   ],
-  "last_updated": "2026-05-03T15:38:34.108959+00:00",
+  "last_updated": "2026-05-06T00:33:29.365763+00:00",
   "available_sets": [
     17,
     16
@@ -32,12 +32,13 @@
           8
         ],
         "shared": {
-          "total_games": 36,
-          "avg_placement": 3.86,
+          "total_games": 37,
+          "avg_placement": 3.84,
           "top1_count": 4,
-          "top4_rate": 61.1
+          "top4_rate": 62.2
         },
         "shared_recent_placements": [
+          3,
           3,
           1,
           7,
@@ -46,8 +47,7 @@
           2,
           1,
           8,
-          3,
-          7
+          3
         ],
         "shared_ranked": {
           "total_games": 10,
@@ -88,21 +88,21 @@
       "윤세호": {
         "tier": "PLATINUM",
         "rank": "IV",
-        "lp": 82,
-        "total_games": 54,
-        "avg_placement": 4.11,
-        "top1_count": 5,
-        "top4_rate": 59.3,
+        "lp": 0,
+        "total_games": 66,
+        "avg_placement": 4.38,
+        "top1_count": 6,
+        "top4_rate": 53.0,
         "recent_placements": [
-          3,
+          6,
           6,
           8,
-          6,
+          1,
+          8,
+          8,
           5,
-          3,
-          8,
-          3,
-          3,
+          2,
+          7,
           7
         ],
         "shared": {
@@ -145,7 +145,7 @@
           {
             "name": "TFT17_DRX",
             "style": 4,
-            "count": 25
+            "count": 31
           },
           {
             "name": "TFT17_ShieldTank",
@@ -162,12 +162,13 @@
       "박성우": {
         "tier": "GOLD",
         "rank": "II",
-        "lp": 14,
-        "total_games": 36,
-        "avg_placement": 4.47,
+        "lp": 43,
+        "total_games": 37,
+        "avg_placement": 4.43,
         "top1_count": 5,
-        "top4_rate": 50.0,
+        "top4_rate": 51.4,
         "recent_placements": [
+          3,
           6,
           2,
           4,
@@ -176,16 +177,16 @@
           1,
           2,
           3,
-          2,
-          3
+          2
         ],
         "shared": {
-          "total_games": 45,
-          "avg_placement": 4.78,
+          "total_games": 46,
+          "avg_placement": 4.72,
           "top1_count": 1,
-          "top4_rate": 46.7
+          "top4_rate": 47.8
         },
         "shared_recent_placements": [
+          2,
           7,
           8,
           6,
@@ -194,8 +195,7 @@
           2,
           2,
           5,
-          8,
-          5
+          8
         ],
         "shared_ranked": {
           "total_games": 13,
@@ -219,7 +219,7 @@
           {
             "name": "TFT17_DarkStar",
             "style": 4,
-            "count": 6
+            "count": 7
           },
           {
             "name": "TFT17_ShieldTank",
@@ -256,12 +256,13 @@
           8
         ],
         "shared": {
-          "total_games": 9,
-          "avg_placement": 3.89,
+          "total_games": 10,
+          "avg_placement": 3.8,
           "top1_count": 2,
-          "top4_rate": 55.6
+          "top4_rate": 60.0
         },
         "shared_recent_placements": [
+          3,
           3,
           1,
           7,
@@ -310,21 +311,21 @@
       "윤세호": {
         "tier": "PLATINUM",
         "rank": "IV",
-        "lp": 82,
-        "total_games": 54,
-        "avg_placement": 4.11,
-        "top1_count": 5,
-        "top4_rate": 59.3,
+        "lp": 0,
+        "total_games": 66,
+        "avg_placement": 4.38,
+        "top1_count": 6,
+        "top4_rate": 53.0,
         "recent_placements": [
-          3,
+          6,
           6,
           8,
-          6,
+          1,
+          8,
+          8,
           5,
-          3,
-          8,
-          3,
-          3,
+          2,
+          7,
           7
         ],
         "shared": {
@@ -367,7 +368,7 @@
           {
             "name": "TFT17_DRX",
             "style": 4,
-            "count": 25
+            "count": 31
           },
           {
             "name": "TFT17_ShieldTank",
@@ -384,12 +385,13 @@
       "박성우": {
         "tier": "GOLD",
         "rank": "II",
-        "lp": 14,
-        "total_games": 35,
-        "avg_placement": 4.4,
+        "lp": 43,
+        "total_games": 36,
+        "avg_placement": 4.36,
         "top1_count": 5,
-        "top4_rate": 51.4,
+        "top4_rate": 52.8,
         "recent_placements": [
+          3,
           6,
           2,
           4,
@@ -398,16 +400,16 @@
           1,
           2,
           3,
-          2,
-          3
+          2
         ],
         "shared": {
-          "total_games": 13,
-          "avg_placement": 5.77,
+          "total_games": 14,
+          "avg_placement": 5.5,
           "top1_count": 0,
-          "top4_rate": 23.1
+          "top4_rate": 28.6
         },
         "shared_recent_placements": [
+          2,
           7,
           8,
           6,
@@ -416,8 +418,7 @@
           2,
           2,
           5,
-          8,
-          5
+          8
         ],
         "shared_ranked": {
           "total_games": 12,
@@ -441,7 +442,7 @@
           {
             "name": "TFT17_DarkStar",
             "style": 4,
-            "count": 6
+            "count": 7
           },
           {
             "name": "TFT17_ShieldTank",
@@ -525,7 +526,7 @@
       "윤세호": {
         "tier": "PLATINUM",
         "rank": "IV",
-        "lp": 82,
+        "lp": 0,
         "total_games": 0,
         "avg_placement": 0,
         "top1_count": 0,
@@ -561,7 +562,7 @@
       "박성우": {
         "tier": "GOLD",
         "rank": "II",
-        "lp": 14,
+        "lp": 43,
         "total_games": 1,
         "avg_placement": 7.0,
         "top1_count": 0,
@@ -601,6 +602,79 @@
     }
   },
   "recent_shared_matches": [
+    {
+      "game_datetime": 1777989558993,
+      "set_number": 17,
+      "results": [
+        {
+          "name": "박성우",
+          "placement": 2,
+          "traits": [
+            {
+              "name": "TFT17_Primordian",
+              "style": 4,
+              "num_units": 3
+            },
+            {
+              "name": "TFT17_FioraUniqueTrait",
+              "style": 3,
+              "num_units": 1
+            },
+            {
+              "name": "TFT17_TahmKenchUniqueTrait",
+              "style": 3,
+              "num_units": 1
+            },
+            {
+              "name": "TFT17_HPTank",
+              "style": 2,
+              "num_units": 4
+            },
+            {
+              "name": "TFT17_MeleeTrait",
+              "style": 2,
+              "num_units": 4
+            },
+            {
+              "name": "TFT17_ASTrait",
+              "style": 1,
+              "num_units": 2
+            }
+          ]
+        },
+        {
+          "name": "하우찬",
+          "placement": 3,
+          "traits": [
+            {
+              "name": "TFT17_Astronaut",
+              "style": 4,
+              "num_units": 7
+            },
+            {
+              "name": "TFT17_GravesTrait",
+              "style": 3,
+              "num_units": 1
+            },
+            {
+              "name": "TFT17_SonaUniqueTrait",
+              "style": 3,
+              "num_units": 1
+            },
+            {
+              "name": "TFT17_ZedUniqueTrait",
+              "style": 3,
+              "num_units": 1
+            },
+            {
+              "name": "TFT17_ResistTank",
+              "style": 1,
+              "num_units": 2
+            }
+          ]
+        }
+      ]
+    },
     {
       "game_datetime": 1777468987958,
       "set_number": 17,
@@ -2965,79 +3039,6 @@
           ]
         }
       ]
-    },
-    {
-      "game_datetime": 1774962263550,
-      "set_number": 16,
-      "results": [
-        {
-          "name": "박성우",
-          "placement": 2,
-          "traits": [
-            {
-              "name": "TFT16_AatroxUnique",
-              "style": 3,
-              "num_units": 1
-            },
-            {
-              "name": "TFT16_Chronokeeper",
-              "style": 3,
-              "num_units": 1
-            },
-            {
-              "name": "TFT16_SylasTrait",
-              "style": 3,
-              "num_units": 1
-            },
-            {
-              "name": "TFT16_TheBoss",
-              "style": 3,
-              "num_units": 1
-            },
-            {
-              "name": "TFT16_Ionia",
-              "style": 2,
-              "num_units": 5
-            },
-            {
-              "name": "TFT16_Brawler",
-              "style": 1,
-              "num_units": 3
-            }
-          ]
-        },
-        {
-          "name": "윤세호",
-          "placement": 5,
-          "traits": [
-            {
-              "name": "TFT16_Void",
-              "style": 4,
-              "num_units": 7
-            },
-            {
-              "name": "TFT16_Blacksmith",
-              "style": 3,
-              "num_units": 1
-            },
-            {
-              "name": "TFT16_KaisaUnique",
-              "style": 3,
-              "num_units": 1
-            },
-            {
-              "name": "TFT16_Brawler",
-              "style": 1,
-              "num_units": 2
-            },
-            {
-              "name": "TFT16_Longshot",
-              "style": 1,
-              "num_units": 2
-            }
-          ]
-        }
-      ]
     }
   ],
   "today": {
@@ -3051,10 +3052,10 @@
       },
       "박성우": {
         "wins": 0,
-        "losses": 0,
+        "losses": 1,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -1,
+        "shared_games": 1
       }
     },
     "윤세호": {
@@ -3075,11 +3076,11 @@
     },
     "박성우": {
       "하우찬": {
-        "wins": 0,
+        "wins": 1,
         "losses": 0,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 1,
+        "shared_games": 1
       },
       "윤세호": {
         "wins": 0,
@@ -3101,10 +3102,10 @@
       },
       "박성우": {
         "wins": 0,
-        "losses": 0,
+        "losses": 1,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -1,
+        "shared_games": 1
       }
     },
     "윤세호": {
@@ -3116,27 +3117,27 @@
         "shared_games": 0
       },
       "박성우": {
-        "wins": 3,
+        "wins": 1,
         "losses": 0,
         "draws": 0,
-        "score": 12,
-        "shared_games": 3
+        "score": 2,
+        "shared_games": 1
       }
     },
     "박성우": {
       "하우찬": {
-        "wins": 0,
+        "wins": 1,
         "losses": 0,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 1,
+        "shared_games": 1
       },
       "윤세호": {
         "wins": 0,
-        "losses": 3,
+        "losses": 1,
         "draws": 0,
-        "score": -12,
-        "shared_games": 3
+        "score": -2,
+        "shared_games": 1
       }
     }
   },
@@ -3151,10 +3152,10 @@
       },
       "박성우": {
         "wins": 17,
-        "losses": 13,
+        "losses": 14,
         "draws": 0,
-        "score": 15,
-        "shared_games": 30
+        "score": 14,
+        "shared_games": 31
       }
     },
     "윤세호": {
@@ -3175,11 +3176,11 @@
     },
     "박성우": {
       "하우찬": {
-        "wins": 13,
+        "wins": 14,
         "losses": 17,
         "draws": 0,
-        "score": -15,
-        "shared_games": 30
+        "score": -14,
+        "shared_games": 31
       },
       "윤세호": {
         "wins": 12,
@@ -3201,10 +3202,10 @@
       },
       "박성우": {
         "wins": 0,
-        "losses": 0,
+        "losses": 1,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -1,
+        "shared_games": 1
       }
     },
     "윤세호": {
@@ -3225,11 +3226,11 @@
     },
     "박성우": {
       "하우찬": {
-        "wins": 0,
+        "wins": 1,
         "losses": 0,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 1,
+        "shared_games": 1
       },
       "윤세호": {
         "wins": 0,
@@ -3251,10 +3252,10 @@
       },
       "박성우": {
         "wins": 0,
-        "losses": 0,
+        "losses": 1,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": -1,
+        "shared_games": 1
       }
     },
     "윤세호": {
@@ -3266,27 +3267,27 @@
         "shared_games": 0
       },
       "박성우": {
-        "wins": 3,
+        "wins": 1,
         "losses": 0,
         "draws": 0,
-        "score": 12,
-        "shared_games": 3
+        "score": 2,
+        "shared_games": 1
       }
     },
     "박성우": {
       "하우찬": {
-        "wins": 0,
+        "wins": 1,
         "losses": 0,
         "draws": 0,
-        "score": 0,
-        "shared_games": 0
+        "score": 1,
+        "shared_games": 1
       },
       "윤세호": {
         "wins": 0,
-        "losses": 3,
+        "losses": 1,
         "draws": 0,
-        "score": -12,
-        "shared_games": 3
+        "score": -2,
+        "shared_games": 1
       }
     }
   },
@@ -3301,10 +3302,10 @@
       },
       "박성우": {
         "wins": 3,
-        "losses": 1,
+        "losses": 2,
         "draws": 0,
-        "score": 8,
-        "shared_games": 4
+        "score": 7,
+        "shared_games": 5
       }
     },
     "윤세호": {
@@ -3325,11 +3326,11 @@
     },
     "박성우": {
       "하우찬": {
-        "wins": 1,
+        "wins": 2,
         "losses": 3,
         "draws": 0,
-        "score": -8,
-        "shared_games": 4
+        "score": -7,
+        "shared_games": 5
       },
       "윤세호": {
         "wins": 4,
