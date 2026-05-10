@@ -7,7 +7,7 @@
       "summoner_id": "",
       "tier": "GOLD",
       "rank": "IV",
-      "lp": 75
+      "lp": 0
     },
     {
       "name": "윤세호",
@@ -15,8 +15,8 @@
       "puuid": "qtEx39EAG9vJgNmO4jJ9xt-5ZEKUJkqQRqQMrn8hgUdbT-hEuijeCxX_vu_pW0sHSEZqHhEBSLJlig",
       "summoner_id": "",
       "tier": "PLATINUM",
-      "rank": "III",
-      "lp": 13
+      "rank": "II",
+      "lp": 65
     },
     {
       "name": "박성우",
@@ -25,7 +25,7 @@
       "summoner_id": "",
       "tier": "GOLD",
       "rank": "II",
-      "lp": 43
+      "lp": 49
     }
   ]
 }
