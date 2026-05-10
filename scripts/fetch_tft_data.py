@@ -21,6 +21,7 @@ KR_BASE = "https://kr.api.riotgames.com"
 DATA_DIR = Path(__file__).parent.parent / "data"
 MATCH_RETENTION_DAYS = 90
 REQUEST_DELAY = 1.5
+EXCLUDED_QUEUE_IDS = {1160}  # Double Up
 
 
 def api_get(url, params=None):
@@ -175,6 +176,8 @@ def compute_recent_shared_matches(matches: dict, players: list, limit: int = 30)
     shared = []
     for match in matches.values():
         info = match.get("info", {})
+        if info.get("queue_id") in EXCLUDED_QUEUE_IDS:
+            continue
         results = []
         for p in info.get("participants", []):
             if p.get("puuid") not in tracked:
@@ -243,6 +246,8 @@ def compute_stats(matches: dict, players: list) -> dict:
 
     for match in matches.values():
         info = match.get("info", {})
+        if info.get("queue_id") in EXCLUDED_QUEUE_IDS:
+            continue
         game_dt = datetime.fromtimestamp(info.get("game_datetime", 0) / 1000, tz=timezone.utc)
         set_num = info.get("tft_set_number", 0)
         in_game = {
